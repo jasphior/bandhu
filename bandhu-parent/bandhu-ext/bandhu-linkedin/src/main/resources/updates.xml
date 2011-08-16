@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<updates total="119" count="10" start="0">
+  <update>
+    <timestamp>1312808991000</timestamp>
+    <update-key>NCON-33085150-41a55ebb*324c6*34f1a*3bba5*382e391e67576-*1</update-key>
+    <update-type>NCON</update-type>
+    <update-content>
+      <person>
+        <id>UMdhYXfmDk</id>
+        <first-name>Naveen</first-name>
+        <last-name>Nair</last-name>
+        <headline>Senior Project Manager / Solution Architect</headline>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_vJv4JCKnf8mrTYVCcYFbJh8ID_RASYVCc4TbJ3A9-Qf3tVDGJ05qBT54iDUaaMRmNVB69Qi4pO8G</picture-url>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/UMdhYXfmDk</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:R6RL</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=33085150&amp;authToken=R6RL&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>0</num-likes>
+  </update>
+  <update>
+    <timestamp>1312807448801</timestamp>
+    <update-key>PROF-13695543-5506313540744519680-*1</update-key>
+    <update-type>PROF</update-type>
+    <update-content>
+      <person>
+        <id>AqS9mq930x</id>
+        <first-name>Jagadamba</first-name>
+        <last-name>B</last-name>
+        <headline>Looking for Dyanmic Senior Leaders</headline>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_QQ0tAd2xNq4BB8FjXFpTAEmAZcS9BiFjXXIDAE0hb-M6ebrgo8fYxowanMDdqX6Ab5juODTOZeRT</picture-url>
+        <member-url-resources count="2">
+          <member-url-resource>
+            <url>http://www.twitter.com/targetcareers</url>
+            <member-url-resource-type>
+              <code>company</code>
+              <name>Company Website</name>
+            </member-url-resource-type>
+          </member-url-resource>
+          <member-url-resource>
+            <url>http://www.taget.com/careers</url>
+            <member-url-resource-type>
+              <code>company</code>
+              <name>Company Website</name>
+            </member-url-resource-type>
+          </member-url-resource>
+        </member-url-resources>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/AqS9mq930x</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:VoeH</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=13695543&amp;authToken=VoeH&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <updated-fields count="1">
+      <update-field>
+        <name>person/headline</name>
+      </update-field>
+    </updated-fields>
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>0</num-likes>
+  </update>
+  <update>
+    <timestamp>1312802768835</timestamp>
+    <update-key>JGRP-33085150-5506293905060012032-*1</update-key>
+    <update-type>JGRP</update-type>
+    <update-content>
+      <person>
+        <id>UMdhYXfmDk</id>
+        <first-name>Naveen</first-name>
+        <last-name>Nair</last-name>
+        <headline>Senior Project Manager / Solution Architect</headline>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_vJv4JCKnf8mrTYVCcYFbJh8ID_RASYVCc4TbJ3A9-Qf3tVDGJ05qBT54iDUaaMRmNVB69Qi4pO8G</picture-url>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/UMdhYXfmDk</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:R6RL</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=33085150&amp;authToken=R6RL&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+        <member-groups total="1">
+          <member-group>
+            <id>798967</id>
+            <name>Indian Architect Community</name>
+            <site-group-request>
+              <url>http://www.linkedin.com/groups?gid=798967</url>
+            </site-group-request>
+          </member-group>
+        </member-groups>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>0</num-likes>
+  </update>
+  <update>
+    <timestamp>1312800101000</timestamp>
+    <update-key>CONN-26774790-*2-*1</update-key>
+    <update-type>CONN</update-type>
+    <update-content>
+      <person>
+        <id>g30qriGwP2</id>
+        <first-name>Prashanth</first-name>
+        <last-name>S</last-name>
+        <headline>Senior Consultant - Technical Sales at Arcot Systems</headline>
+        <connections total="1">
+          <person>
+            <id>LehCZoCjg7</id>
+            <auth-token>name:9Jyd</auth-token>
+            <first-name>Hanumantha</first-name>
+            <last-name>Reddy</last-name>
+            <headline>Technical Consultant at Consilium</headline>
+            <api-standard-profile-request>
+              <url>http://api.linkedin.com/v1/people/LehCZoCjg7</url>
+              <headers total="1">
+                <http-header>
+                  <name>x-li-auth-token</name>
+                  <value>name:9Jyd</value>
+                </http-header>
+              </headers>
+            </api-standard-profile-request>
+            <site-standard-profile-request>
+              <url>http://www.linkedin.com/profile?viewProfile=&amp;key=130782675&amp;authToken=9Jyd&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+            </site-standard-profile-request>
+          </person>
+        </connections>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_Lw2NlIyVdls95eFpF7YFle4HIcf9LeFpbu4IlexHq-R6V2ryWSpZ0HI6LM7dQ76rXeaEYfT7bs-H</picture-url>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/g30qriGwP2</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:18nq</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=26774790&amp;authToken=18nq&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>0</num-likes>
+  </update>
+  <update>
+    <timestamp>1312793728644</timestamp>
+    <update-key>UNIU-6907612-5506255987226456064-SHARE</update-key>
+    <update-type>STAT</update-type>
+    <update-content>
+      <person>
+        <id>_xbHzSKh5g</id>
+        <first-name>Preejith</first-name>
+        <last-name>PS</last-name>
+        <headline>Associate Manager - HR  at Symphony Services</headline>
+        <current-status>Looking for candidates with experience in testing on MS CRM,MS Dynamics applications. Please send in your profiles if interested to preejit…</current-status>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_XUxLRHiUbb4VTeYDQpu9RwTvbFIq_mmDQJwsRwr5ZG0XyoMSeg7dvIkwWWwIhW73LZgRq2Ghm8yj</picture-url>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/_xbHzSKh5g</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:Dy_r</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6907612&amp;authToken=Dy_r&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>2</num-likes>
+    <likes total="2">
+      <like>
+        <person>
+          <id>FjxYYh9ViG</id>
+          <first-name>Sree Lakshmi</first-name>
+          <last-name>Bharathi Rajoli</last-name>
+          <headline>Consultant at Ness Technologies</headline>
+        </person>
+      </like>
+      <like>
+        <person>
+          <id>9HmeLVmzJk</id>
+          <first-name>Lubdha</first-name>
+          <last-name>Sapkal</last-name>
+          <headline>Consultant at Tata Consultancy Services</headline>
+          <picture-url>http://media.linkedin.com/mpr/mprx/0_V24ZqLZzW6y7oIoy4wIIqbeWI8aSoDUyZm2FqQEzq5VgzWupnoHNs6ORLamtWosKRfVQR3Nwbniv</picture-url>
+        </person>
+      </like>
+    </likes>
+  </update>
+  <update>
+    <timestamp>1312789142000</timestamp>
+    <update-key>CONN-6907612-*2-*1</update-key>
+    <update-type>CONN</update-type>
+    <update-content>
+      <person>
+        <id>_xbHzSKh5g</id>
+        <first-name>Preejith</first-name>
+        <last-name>PS</last-name>
+        <headline>Associate Manager - HR  at Symphony Services</headline>
+        <connections total="1">
+          <person>
+            <id>PThq-l-w95</id>
+            <auth-token>name:xl8p</auth-token>
+            <first-name>Sharat</first-name>
+            <last-name>Chandra</last-name>
+            <headline>at Apple South Asia Pte Ltd</headline>
+            <picture-url>http://media.linkedin.com/mpr/mprx/0_Ow-uHBjc-71a5q7oO7CxHqwMruLG5lOoyu61HqVLfWA-szdEtSG8QNmIOG5j6n060ertFPeHZZft</picture-url>
+            <api-standard-profile-request>
+              <url>http://api.linkedin.com/v1/people/PThq-l-w95</url>
+              <headers total="1">
+                <http-header>
+                  <name>x-li-auth-token</name>
+                  <value>name:xl8p</value>
+                </http-header>
+              </headers>
+            </api-standard-profile-request>
+            <site-standard-profile-request>
+              <url>http://www.linkedin.com/profile?viewProfile=&amp;key=23535190&amp;authToken=xl8p&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+            </site-standard-profile-request>
+          </person>
+        </connections>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_XUxLRHiUbb4VTeYDQpu9RwTvbFIq_mmDQJwsRwr5ZG0XyoMSeg7dvIkwWWwIhW73LZgRq2Ghm8yj</picture-url>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/_xbHzSKh5g</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:Dy_r</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6907612&amp;authToken=Dy_r&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>0</num-likes>
+  </update>
+  <update>
+    <timestamp>1312789130000</timestamp>
+    <update-key>CONN-6907612-*2-*1</update-key>
+    <update-type>CONN</update-type>
+    <update-content>
+      <person>
+        <id>_xbHzSKh5g</id>
+        <first-name>Preejith</first-name>
+        <last-name>PS</last-name>
+        <headline>Associate Manager - HR  at Symphony Services</headline>
+        <connections total="1">
+          <person>
+            <id>SKS0q0EKXy</id>
+            <auth-token>name:LDMx</auth-token>
+            <first-name>Debabrata</first-name>
+            <last-name>Mishra. Looking for a job change.</last-name>
+            <headline>Project Engineer at Wipro Technology Services</headline>
+            <picture-url>http://media.linkedin.com/mpr/mprx/0_4dB69TMH8CdGwOmPnmFM9ioHhX0CIgfPsw_M9GRc03ItqJ41NfboZC7JaExgesaxJov4J5LlVWsp</picture-url>
+            <api-standard-profile-request>
+              <url>http://api.linkedin.com/v1/people/SKS0q0EKXy</url>
+              <headers total="1">
+                <http-header>
+                  <name>x-li-auth-token</name>
+                  <value>name:LDMx</value>
+                </http-header>
+              </headers>
+            </api-standard-profile-request>
+            <site-standard-profile-request>
+              <url>http://www.linkedin.com/profile?viewProfile=&amp;key=31398254&amp;authToken=LDMx&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+            </site-standard-profile-request>
+          </person>
+        </connections>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_XUxLRHiUbb4VTeYDQpu9RwTvbFIq_mmDQJwsRwr5ZG0XyoMSeg7dvIkwWWwIhW73LZgRq2Ghm8yj</picture-url>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/_xbHzSKh5g</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:Dy_r</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6907612&amp;authToken=Dy_r&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>0</num-likes>
+  </update>
+  <update>
+    <timestamp>1312789061000</timestamp>
+    <update-key>CONN-6907612-*2-*1</update-key>
+    <update-type>CONN</update-type>
+    <update-content>
+      <person>
+        <id>_xbHzSKh5g</id>
+        <first-name>Preejith</first-name>
+        <last-name>PS</last-name>
+        <headline>Associate Manager - HR  at Symphony Services</headline>
+        <connections total="1">
+          <person>
+            <id>iEhiboBCGh</id>
+            <auth-token>name:Rv6M</auth-token>
+            <first-name>Prem</first-name>
+            <last-name>Kumar</last-name>
+            <headline>Team Lead ( IT Consulting ) at Crux Technologies</headline>
+            <picture-url>http://media.linkedin.com/mpr/mprx/0_FfbQYoOL8PgWwOGS57NvYWWXhnoJIUGS5SPJYWmR0POdq0zDwdBErdVza4E6eyiT625ZlayCQe7R</picture-url>
+            <api-standard-profile-request>
+              <url>http://api.linkedin.com/v1/people/iEhiboBCGh</url>
+              <headers total="1">
+                <http-header>
+                  <name>x-li-auth-token</name>
+                  <value>name:Rv6M</value>
+                </http-header>
+              </headers>
+            </api-standard-profile-request>
+            <site-standard-profile-request>
+              <url>http://www.linkedin.com/profile?viewProfile=&amp;key=37064394&amp;authToken=Rv6M&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+            </site-standard-profile-request>
+          </person>
+        </connections>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_XUxLRHiUbb4VTeYDQpu9RwTvbFIq_mmDQJwsRwr5ZG0XyoMSeg7dvIkwWWwIhW73LZgRq2Ghm8yj</picture-url>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/_xbHzSKh5g</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:Dy_r</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6907612&amp;authToken=Dy_r&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>0</num-likes>
+  </update>
+  <update>
+    <timestamp>1312789009000</timestamp>
+    <update-key>CONN-6907612-*2-*1</update-key>
+    <update-type>CONN</update-type>
+    <update-content>
+      <person>
+        <id>_xbHzSKh5g</id>
+        <first-name>Preejith</first-name>
+        <last-name>PS</last-name>
+        <headline>Associate Manager - HR  at Symphony Services</headline>
+        <connections total="1">
+          <person>
+            <id>9wGPVqtO4u</id>
+            <auth-token>name:twt1</auth-token>
+            <first-name>Mustafa</first-name>
+            <last-name>Shaik</last-name>
+            <headline>Mobile Engineer at Yahoo!</headline>
+            <picture-url>http://media.linkedin.com/mpr/mprx/0_JcF2qhXTl3HiyvarJlB1qCX3Pi0hY9xrU91PqCvju6IrTteKvAchsG31gSx0jAYp4qL-RLFn2Nnf</picture-url>
+            <api-standard-profile-request>
+              <url>http://api.linkedin.com/v1/people/9wGPVqtO4u</url>
+              <headers total="1">
+                <http-header>
+                  <name>x-li-auth-token</name>
+                  <value>name:twt1</value>
+                </http-header>
+              </headers>
+            </api-standard-profile-request>
+            <site-standard-profile-request>
+              <url>http://www.linkedin.com/profile?viewProfile=&amp;key=12899038&amp;authToken=twt1&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+            </site-standard-profile-request>
+          </person>
+        </connections>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_XUxLRHiUbb4VTeYDQpu9RwTvbFIq_mmDQJwsRwr5ZG0XyoMSeg7dvIkwWWwIhW73LZgRq2Ghm8yj</picture-url>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/_xbHzSKh5g</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:Dy_r</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6907612&amp;authToken=Dy_r&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>0</num-likes>
+  </update>
+  <update>
+    <timestamp>1312788987000</timestamp>
+    <update-key>CONN-6907612-*2-*1</update-key>
+    <update-type>CONN</update-type>
+    <update-content>
+      <person>
+        <id>_xbHzSKh5g</id>
+        <first-name>Preejith</first-name>
+        <last-name>PS</last-name>
+        <headline>Associate Manager - HR  at Symphony Services</headline>
+        <connections total="1">
+          <person>
+            <id>NsFVXn57-L</id>
+            <auth-token>name:DAjg</auth-token>
+            <first-name>Sivathanu</first-name>
+            <last-name>N</last-name>
+            <headline>Process Trainer at RedEgg InfoExpert Technologies Pvt. Ltd.</headline>
+            <picture-url>http://media.linkedin.com/mpr/mprx/0_OurBLBoMadLYFgU4yo3XLzW4uW8aFOo4yaXHLqEbPuNO4sjZtEhUwNOWCFhAkJIq07-WoPZ2B19g</picture-url>
+            <api-standard-profile-request>
+              <url>http://api.linkedin.com/v1/people/NsFVXn57-L</url>
+              <headers total="1">
+                <http-header>
+                  <name>x-li-auth-token</name>
+                  <value>name:DAjg</value>
+                </http-header>
+              </headers>
+            </api-standard-profile-request>
+            <site-standard-profile-request>
+              <url>http://www.linkedin.com/profile?viewProfile=&amp;key=38600118&amp;authToken=DAjg&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+            </site-standard-profile-request>
+          </person>
+        </connections>
+        <picture-url>http://media.linkedin.com/mpr/mprx/0_XUxLRHiUbb4VTeYDQpu9RwTvbFIq_mmDQJwsRwr5ZG0XyoMSeg7dvIkwWWwIhW73LZgRq2Ghm8yj</picture-url>
+        <api-standard-profile-request>
+          <url>http://api.linkedin.com/v1/people/_xbHzSKh5g</url>
+          <headers total="1">
+            <http-header>
+              <name>x-li-auth-token</name>
+              <value>name:Dy_r</value>
+            </http-header>
+          </headers>
+        </api-standard-profile-request>
+        <site-standard-profile-request>
+          <url>http://www.linkedin.com/profile?viewProfile=&amp;key=6907612&amp;authToken=Dy_r&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+        </site-standard-profile-request>
+      </person>
+    </update-content>
+    <is-commentable>true</is-commentable>
+    <update-comments total="0" />
+    <is-likable>true</is-likable>
+    <is-liked>false</is-liked>
+    <num-likes>0</num-likes>
+  </update>
+</updates>

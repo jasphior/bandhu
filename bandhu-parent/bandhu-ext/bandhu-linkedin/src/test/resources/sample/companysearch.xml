@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<company-search>
+  <companies total="685" count="10" start="0">
+    <company>
+      <id>4301</id>
+      <name>Symphony Services</name>
+      <universal-name>symphony-services</universal-name>
+      <status>
+        <code>OPR</code>
+        <name>Operating</name>
+      </status>
+      <logo-url>http://media.linkedin.com/mpr/mpr/p/3/000/014/1ba/06fd40b.png</logo-url>
+      <website-url>http://www.symphonysv.com</website-url>
+      <employee-count-range>
+        <code>G</code>
+        <name>1001-5000</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>4</code>
+          <name>Computer Software</name>
+        </industry>
+      </industries>
+      <specialties total="15">
+        <specialty>Software Product Engineering Services</specialty>
+        <specialty>Commercial Grade Software</specialty>
+        <specialty>Embedded Systems and Software</specialty>
+        <specialty>Strategic Consulting</specialty>
+        <specialty>OPD</specialty>
+        <specialty>SOA</specialty>
+        <specialty>SaaS</specialty>
+        <specialty>Product Line Management</specialty>
+        <specialty>Enterprise</specialty>
+        <specialty>Storage</specialty>
+        <specialty>Telecom</specialty>
+        <specialty>Globalization</specialty>
+        <specialty>Architecture</specialty>
+        <specialty>Quality</specialty>
+        <specialty>QA &amp; PSR Testing</specialty>
+      </specialties>
+      <locations total="4">
+        <location>
+          <address>
+            <street1>2475 Hanover Street</street1>
+            <city>Palo Alto</city>
+            <postal-code>94304</postal-code>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+        <location>
+          <address>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+        <location>
+          <address>
+            <street1>Symphony Services Corp. (India) Pvt. Ltd.</street1>
+            <city>Bangalore</city>
+            <postal-code>560087</postal-code>
+          </address>
+          <contact-info>
+            <phone1>+91-80-3027 1000</phone1>
+            <fax>+91-80-3027 2000</fax>
+          </contact-info>
+        </location>
+        <location>
+          <address>
+            <street1>Center for Innovation in Product Development</street1>
+            <city>Pune</city>
+            <postal-code>411045</postal-code>
+          </address>
+          <contact-info>
+            <phone1>91.20. 30566000</phone1>
+            <fax>91.20.30566354</fax>
+          </contact-info>
+        </location>
+      </locations>
+      <description>Symphony Service Corp. is the only global specialist providing software product engineering outsourcing services that enable clients to achieve outcome certainty.  ISV’s, software-enabled businesses, and companies whose products contain embedded software partner with Symphony Services to achieve their business goals: from improving product line revenue to raising customer satisfaction, increasing product innovations and reducing time-to-market.  The company helps clients drive unparalleled innovation while bringing predictability to costs, schedules and quality of the outsourced engineering process.  Symphony Services’ capabilities across the full product development lifecycle maximize the ROI for client engineering organizations while delivering market-leading products in Telecom, Healthcare, Energy, Automotive, Electronic Components, Financial Services and Internet Commerce.  
+
+The company’s risk-reward partnership models and focus on transparent, metrics-driven value delivery ensures complete alignment with clients’ business and R&amp;D objectives.  Utilizing an approach centering on a repeatable, industrialized process that drives productivity across all client engagements while guaranteeing business outcomes, Symphony Services is helping its clients successfully release over 1,200 software products annually.  Leveraging the product DNA and superior intellect of its people, the company’s approach leads to superior engineering on-time, on-budget, outcome certainty guaranteed.  Symphony Services is headquartered in Palo Alto, Calif., with facilities in North America, India, Europe and China.</description>
+      <founded-year>2002</founded-year>
+      <num-followers>5735</num-followers>
+    </company>
+    <company>
+      <id>166222</id>
+      <name>Symphony Marketing Solutions</name>
+      <universal-name>symphony-marketing-solutions</universal-name>
+      <status>
+        <code>OPR</code>
+        <name>Operating</name>
+      </status>
+      <logo-url>http://media.linkedin.com/mpr/mpr/p/3/000/025/10c/027e8f4.png</logo-url>
+      <website-url>www.symphonyms.com</website-url>
+      <employee-count-range>
+        <code>G</code>
+        <name>1001-5000</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>97</code>
+          <name>Market Research</name>
+        </industry>
+      </industries>
+      <specialties total="3">
+        <specialty>Market Research</specialty>
+        <specialty>Analytics</specialty>
+        <specialty>Predictive Modeling</specialty>
+      </specialties>
+      <locations total="3">
+        <location>
+          <address>
+            <street1>#3530, Post Road,</street1>
+            <city>Southport</city>
+            <postal-code>06890</postal-code>
+          </address>
+          <contact-info>
+            <phone1>203-256-8216</phone1>
+            <fax>203-256-5976</fax>
+          </contact-info>
+        </location>
+        <location>
+          <address>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+        <location>
+          <address>
+            <street1>Salarpuria Softzone, Building #2,</street1>
+            <city>Bangalore</city>
+            <postal-code>560087</postal-code>
+          </address>
+          <contact-info>
+            <phone1>080-3025-2000</phone1>
+          </contact-info>
+        </location>
+      </locations>
+      <description>Symphony Marketing Solutions provides technology-enabled marketing services and solutions, leveraging a multi-shore delivery model capable of delivering full scale transformational outsourcing. We focus on Advanced Analytics, Business Intelligence and Data Management/Integration.
+
+We continuously strive to deliver unsurpassed insight to sales and marketing information at a fraction of traditional costs.
+
+Over 1,200 professionals provide Transformational Outsourcing and Technology Solutions in Marketing Analytics worldwide, making SMS one of the largest players in its sector.</description>
+      <founded-year>2007</founded-year>
+      <num-followers>595</num-followers>
+    </company>
+    <company>
+      <id>20256</id>
+      <name>Chicago Symphony Orchestra</name>
+      <universal-name>chicago-symphony-orchestra</universal-name>
+      <status>
+        <code>OPR</code>
+        <name>Operating</name>
+      </status>
+      <website-url>http://www.cso.org</website-url>
+      <blog-rss-url>http://www.cso.org/res/rss_press.xml</blog-rss-url>
+      <employee-count-range>
+        <code>E</code>
+        <name>201-500</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>39</code>
+          <name>Performing Arts</name>
+        </industry>
+      </industries>
+      <specialties total="1">
+        <specialty>orchestra</specialty>
+      </specialties>
+      <locations total="1">
+        <location>
+          <address>
+            <street1>220 South Michigan Avenue</street1>
+            <city>Chicago</city>
+            <postal-code>60604</postal-code>
+          </address>
+          <contact-info>
+            <phone1>312 294 3000</phone1>
+          </contact-info>
+        </location>
+      </locations>
+      <description>In its second century, the Chicago Symphony Orchestra enjoys an enviable position in the music world with performances greeted by enthusiastic audiences both at home and abroad.</description>
+      <founded-year>1891</founded-year>
+      <num-followers>339</num-followers>
+    </company>
+    <company>
+      <id>3069</id>
+      <name>Symphony IRI Group</name>
+      <universal-name>symphony-iri-group</universal-name>
+      <status>
+        <code>OPR</code>
+        <name>Operating</name>
+      </status>
+      <logo-url>http://media.linkedin.com/mpr/mpr/p/2/000/052/0aa/181ffe3.png</logo-url>
+      <website-url>http://www.infores.com</website-url>
+      <employee-count-range>
+        <code>G</code>
+        <name>1001-5000</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>97</code>
+          <name>Market Research</name>
+        </industry>
+      </industries>
+      <specialties total="1">
+        <specialty>&quot;Market Research&quot;</specialty>
+      </specialties>
+      <locations total="2">
+        <location>
+          <address>
+            <street1>150 N Clinton St</street1>
+            <city>Chicago</city>
+            <postal-code>60661</postal-code>
+          </address>
+          <contact-info>
+            <phone1>(312) 726-1221</phone1>
+          </contact-info>
+        </location>
+        <location>
+          <address>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+      </locations>
+      <description>Founded in 1979, Information Resources, Inc. (IRI) is the leading global provider of enterprise market information solutions and services, empowering its clients to grow their business profitably in a complex marketplace.  Driving the transformation of the consumer packaged goods (CPG), retail, and healthcare industries, IRI provides a unique combination of real-time market content, advanced analytics, enterprise performance management software, and professional services. The company’s portfolio of services, solutions, and technology enables leading retailers and their suppliers around the globe to see what they are missing, act faster with greater confidence and win at the shelf.</description>
+      <founded-year>1979</founded-year>
+      <num-followers>2683</num-followers>
+    </company>
+    <company>
+      <id>19465</id>
+      <name>San Francisco Symphony</name>
+      <universal-name>san-francisco-symphony</universal-name>
+      <logo-url>http://media.linkedin.com/mpr/mpr/p/1/000/020/375/25b0eff.png</logo-url>
+      <website-url>www.sfsymphony.org</website-url>
+      <employee-count-range>
+        <code>D</code>
+        <name>51-200</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>39</code>
+          <name>Performing Arts</name>
+        </industry>
+      </industries>
+      <specialties total="1">
+        <specialty>The San Francisco Symphony sets the highest standard of excellence in orchestral performance in over 220 concerts a year.</specialty>
+      </specialties>
+      <locations total="1">
+        <location>
+          <address>
+            <street1>201 Van Ness Avenue</street1>
+            <city>San Francisco</city>
+            <postal-code>94102</postal-code>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+      </locations>
+      <description>The San Francisco Symphony (SFS) is widely considered to be among the country’s most artistically adventurous and innovative arts institutions.  Under Music Director Michael Tilson Thomas, the SFS presents more than 220 concerts and presentations annually for an audience of nearly 600,000 in Davies Symphony Hall, other Bay Area venues, and through touring. 
+
+Tilson Thomas assumed his post as the SFS’s eleventh Music Director in 1995. Together, he and the San Francisco Symphony have formed a musical partnership hailed as one of the most inspiring and successful in the country.  
+
+In 1996, Tilson Thomas led the Orchestra on the first of their fourteen national tours together, and they tour annually to concert halls in Europe, Asia and throughout the United States.   
+
+Since 2001, Tilson Thomas and the Orchestra have recorded all nine of Mahler’s symphonies and the Adagio from the unfinished Tenth Symphony, and plan to record the composer’s complete works for voices, chorus, and orchestra for SFS Media.  
+
+In fall 2006, Tilson Thomas and the SFS launched the national Keeping Score PBS television series and multimedia project.  Keeping Score is the San Francisco Symphony’s national program designed to make classical music more accessible to people of all ages and musical backgrounds.  The project is anchored by a national PBS television series that debuted in 2006, and includes an innovative website, www.keepingscore.org, to explore and learn about music; a national radio series, The MTT Files; documentary and live performance DVDs; and an education program for K-12 schools. 
+
+The San Francisco Symphony provides the most extensive education and community programs offered by any American orchestra today.  In 1988, the Symphony established Adventures in Music (AIM), a free, comprehensive music education program that introduces every first- through fifth-grade child in the San Francisco Unified School District to music from around the world.</description>
+      <founded-year>1911</founded-year>
+      <num-followers>430</num-followers>
+    </company>
+    <company>
+      <id>19474</id>
+      <name>Boston Symphony Orchestra</name>
+      <universal-name>boston-symphony-orchestra</universal-name>
+      <employee-count-range>
+        <code>E</code>
+        <name>201-500</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>39</code>
+          <name>Performing Arts</name>
+        </industry>
+      </industries>
+      <locations total="1">
+        <location>
+          <address>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+      </locations>
+      <num-followers>295</num-followers>
+    </company>
+    <company>
+      <id>42725</id>
+      <name>Nashville Symphony</name>
+      <universal-name>nashville-symphony</universal-name>
+      <logo-url>http://media.linkedin.com/mpr/mpr/p/1/000/03d/06c/376ed5d.png</logo-url>
+      <employee-count-range>
+        <code>E</code>
+        <name>201-500</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>115</code>
+          <name>Music</name>
+        </industry>
+      </industries>
+      <locations total="1">
+        <location>
+          <address>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+      </locations>
+      <num-followers>163</num-followers>
+    </company>
+    <company>
+      <id>6721</id>
+      <name>SirsiDynix</name>
+      <universal-name>sirsidynix</universal-name>
+      <status>
+        <code>OPR</code>
+        <name>Operating</name>
+      </status>
+      <logo-url>http://media.linkedin.com/mpr/mpr/p/2/000/06e/2f9/2b5e447.png</logo-url>
+      <website-url>http://www.sirsidynix.com</website-url>
+      <employee-count-range>
+        <code>E</code>
+        <name>201-500</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>4</code>
+          <name>Computer Software</name>
+        </industry>
+      </industries>
+      <specialties total="3">
+        <specialty>library technology</specialty>
+        <specialty>library automation</specialty>
+        <specialty>information services</specialty>
+      </specialties>
+      <locations total="2">
+        <location>
+          <address>
+            <street1>400 North Dynix Drive</street1>
+            <city>Provo</city>
+            <postal-code>84604</postal-code>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+        <location>
+          <address>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+      </locations>
+      <description>SirsiDynix® is the world’s leading provider of library technology solutions, connecting over 300 million people with information and resources at over 4,000 academic, public, school, government and corporate libraries in 70 countries. With the pioneering Symphony Integrated Library System at its core, SirsiDynix offers a full host of solutions developed to be open for customization, interoperability and scalability.</description>
+      <founded-year>1981</founded-year>
+      <num-followers>483</num-followers>
+    </company>
+    <company>
+      <id>31288</id>
+      <name>Dallas Symphony Orchestra</name>
+      <universal-name>dallas-symphony-orchestra</universal-name>
+      <status>
+        <code>OPR</code>
+        <name>Operating</name>
+      </status>
+      <logo-url>http://media.linkedin.com/mpr/mpr/p/1/000/0cc/064/370aa81.png</logo-url>
+      <website-url>www.dallassymphony.com</website-url>
+      <blog-rss-url>http://dallassymphony.com/blog/rss.aspx</blog-rss-url>
+      <twitter-id>DallasSymphony</twitter-id>
+      <employee-count-range>
+        <code>D</code>
+        <name>51-200</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>115</code>
+          <name>Music</name>
+        </industry>
+      </industries>
+      <specialties total="3">
+        <specialty>Music</specialty>
+        <specialty>Concerts</specialty>
+        <specialty>Performing Arts</specialty>
+      </specialties>
+      <locations total="2">
+        <location>
+          <address>
+            <street1>2301 Flora Street</street1>
+            <city>Dallas</city>
+            <postal-code>75201</postal-code>
+          </address>
+          <contact-info>
+            <phone1>214-692-0203</phone1>
+            <fax></fax>
+          </contact-info>
+        </location>
+        <location>
+          <address>
+            <street1>2301 Flora Street</street1>
+            <city>Dallas</city>
+            <postal-code>75201</postal-code>
+          </address>
+          <contact-info>
+            <phone1>214-871-4000</phone1>
+            <fax></fax>
+          </contact-info>
+        </location>
+      </locations>
+      <description>The Dallas Symphony's mission statement is to entertain, inspire and change lives through musical excellence.
+
+Since 1900, the Dallas Symphony Orchestra has grown from a 40-person ensemble to a world-class orchestra performing in one of the world's finest concert halls. 
+
+The home of the Dallas Symphony Orchestra, the Meyerson Symphony Center, is just as integral to the sound of the music as the musicians themselves.
+
+The members of the Dallas Symphony Orchestra's musical community build upon a rich 111-year tradition of artistic excellence and masterful musicianship.
+
+Visit our website at Dallassymphony.com for more information.</description>
+      <founded-year>1900</founded-year>
+      <num-followers>224</num-followers>
+    </company>
+    <company>
+      <id>19782</id>
+      <name>Video Symphony</name>
+      <universal-name>video-symphony</universal-name>
+      <status>
+        <code>OPR</code>
+        <name>Operating</name>
+      </status>
+      <logo-url>http://media.linkedin.com/mpr/mpr/p/3/000/0b5/32b/0366720.png</logo-url>
+      <website-url>www.videosymphony.com</website-url>
+      <blog-rss-url>www.videosymphony.com/blog</blog-rss-url>
+      <twitter-id>https://twitter.com/#!/videosymphony</twitter-id>
+      <employee-count-range>
+        <code>C</code>
+        <name>11-50</name>
+      </employee-count-range>
+      <industries total="1">
+        <industry>
+          <code>35</code>
+          <name>Motion Pictures and Film</name>
+        </industry>
+      </industries>
+      <specialties total="11">
+        <specialty>TV</specialty>
+        <specialty>Film</specialty>
+        <specialty>Post Production</specialty>
+        <specialty>Animation</specialty>
+        <specialty>Audio</specialty>
+        <specialty>Sound</specialty>
+        <specialty>Video</specialty>
+        <specialty>Editing</specialty>
+        <specialty>Motion Graphics</specialty>
+        <specialty>Mixing</specialty>
+        <specialty>New Media</specialty>
+      </specialties>
+      <locations total="2">
+        <location>
+          <address>
+            <street1>266 E. Magnolia</street1>
+            <city>Burbank</city>
+            <postal-code>91502</postal-code>
+          </address>
+          <contact-info>
+            <phone1>818-557-7200</phone1>
+            <fax>818-845-1951</fax>
+          </contact-info>
+        </location>
+        <location>
+          <address>
+            <street1>2201 W. Burbank Blvd.</street1>
+            <city>Burbank</city>
+            <postal-code>91506</postal-code>
+          </address>
+          <contact-info>
+          </contact-info>
+        </location>
+      </locations>
+      <description>Video Symphony, School of Film Editing, New media, Audio, and Graphics and Animation, is a career training center for TV &amp; Film Post Production, based in Burbank. Video Symphony is a nationally accredited career college with job placement and career services. Students are eligible for Federal Student Aid. Hands-on courses in Avid, Final Cut, After Effects, Photoshop, Pro Tools, Maya and others are taught by Hollywood industry professionals, and are taken by working professionals as well as those seeking a new career in entertainment.</description>
+      <founded-year>1994</founded-year>
+      <num-followers>539</num-followers>
+    </company>
+  </companies>
+</company-search>

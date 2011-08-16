@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="updates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="update"/>
+      </xs:sequence>
+      <xs:attribute name="count" use="required" type="xs:integer"/>
+      <xs:attribute name="start" use="required" type="xs:integer"/>
+      <xs:attribute name="total" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="timestamp"/>
+        <xs:element ref="update-key"/>
+        <xs:element ref="update-type"/>
+        <xs:element ref="update-content"/>
+        <xs:element ref="is-commentable"/>
+        <xs:element ref="update-comments"/>
+        <xs:element minOccurs="0" ref="updated-fields"/>
+        <xs:element ref="is-likable"/>
+        <xs:element ref="is-liked"/>
+        <xs:element ref="num-likes"/>
+        <xs:element minOccurs="0" ref="likes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="timestamp" type="xs:integer"/>
+  <xs:element name="update-key" type="xs:string"/>
+  <xs:element name="update-type" type="xs:NCName"/>
+  <xs:element name="update-content" type="person"/>
+  <xs:element name="is-commentable" type="xs:boolean"/>
+  <xs:element name="update-comments">
+    <xs:complexType>
+      <xs:attribute name="total" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updated-fields">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="update-field"/>
+      </xs:sequence>
+      <xs:attribute name="count" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="update-field">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="is-likable" type="xs:boolean"/>
+  <xs:element name="is-liked" type="xs:boolean"/>
+  <xs:element name="num-likes" type="xs:integer"/>
+  <xs:element name="likes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="like"/>
+      </xs:sequence>
+      <xs:attribute name="total" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="like" type="person"/>
+  <xs:complexType name="person">
+    <xs:sequence>
+      <xs:element ref="person"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="id"/>
+          <xs:element ref="auth-token"/>
+          <xs:element ref="connections"/>
+          <xs:element ref="first-name"/>
+          <xs:element ref="headline"/>
+          <xs:element ref="last-name"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="current-status"/>
+        <xs:element minOccurs="0" ref="picture-url"/>
+        <xs:element minOccurs="0" ref="member-url-resources"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="api-standard-profile-request"/>
+          <xs:element ref="site-standard-profile-request"/>
+        </xs:sequence>
+        <xs:element minOccurs="0" ref="member-groups"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="auth-token" type="xs:NMTOKEN"/>
+  <xs:element name="connections">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="person">
+          <xs:attribute name="total" use="required" type="xs:integer"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="first-name" type="xs:string"/>
+  <xs:element name="headline" type="xs:string"/>
+  <xs:element name="last-name" type="xs:string"/>
+  <xs:element name="current-status" type="xs:string"/>
+  <xs:element name="picture-url" type="xs:anyURI"/>
+  <xs:element name="member-url-resources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="member-url-resource"/>
+      </xs:sequence>
+      <xs:attribute name="count" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="member-url-resource">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="url">
+          <xs:sequence>
+            <xs:element ref="member-url-resource-type"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="member-url-resource-type">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="code"/>
+        <xs:element ref="name"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="code" type="xs:NCName"/>
+  <xs:element name="api-standard-profile-request">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="url">
+          <xs:sequence>
+            <xs:element ref="headers"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="headers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="http-header"/>
+      </xs:sequence>
+      <xs:attribute name="total" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="http-header">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="value"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="value" type="xs:NMTOKEN"/>
+  <xs:element name="site-standard-profile-request" type="url"/>
+  <xs:element name="member-groups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="member-group"/>
+      </xs:sequence>
+      <xs:attribute name="total" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="member-group">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="name"/>
+        <xs:element ref="site-group-request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="site-group-request" type="url"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="id" type="xs:NMTOKEN"/>
+  <xs:complexType name="url">
+    <xs:sequence>
+      <xs:element ref="url"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="url" type="xs:anyURI"/>
+</xs:schema>

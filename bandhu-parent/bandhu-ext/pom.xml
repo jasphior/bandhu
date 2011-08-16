@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>bandhu-parent</artifactId>
+		<groupId>org.bandhu</groupId>
+		<version>${bandhu.version}</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.bandhu.ext</groupId>
+	<artifactId>bandhu-ext</artifactId>
+	<version>${bandhu.version}</version>
+	<packaging>pom</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>org.bandhu</groupId>
+			<artifactId>bandhu-core</artifactId>
+			<version>${bandhu.version}</version>
+		</dependency>
+	</dependencies>	
+
+	<modules>
+		<module>bandhu-linkedin</module>
+		<module>bandhu-twitter</module>
+		<module>bandhu-fb</module>
+	</modules>
+</project>

@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="company-search" type="company-searchType"/>
+  <xs:element name="connections" type="connectionsType"/>
+  <xs:element name="error" type="errorType"/>
+  <xs:element name="person" type="personType"/>
+  <xs:element name="people-search" type="people-searchType"/>
+  <xs:element name="updates" type="updatesType"/>
+  <xs:complexType name="statusType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="code"/>
+      <xs:element type="xs:string" name="name"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="employee-count-rangeType">
+    <xs:sequence>
+      <xs:element name="code">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="C"/>
+            <xs:enumeration value="G"/>
+            <xs:enumeration value="D"/>
+            <xs:enumeration value="E"/>
+            <xs:enumeration value="N"/>
+            <xs:enumeration value="O"/>
+            <xs:enumeration value="P"/>
+            <xs:enumeration value="S"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="industryType">
+    <xs:sequence>
+      <xs:element name="code">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="industriesType">
+    <xs:sequence>
+      <xs:element type="industryType" name="industry"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="specialtiesType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="specialty" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="street1" minOccurs="0"/>
+      <xs:element name="city" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:int" name="postal-code" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationType">
+    <xs:sequence>
+      <xs:element type="addressType" name="address" minOccurs="0"/>
+      <xs:element name="contact-info" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="phone1" minOccurs="0">
+              <xs:simpleType>
+                <xs:restriction base="xs:string"/>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="fax" minOccurs="0">
+              <xs:simpleType>
+                <xs:restriction base="xs:string"/>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element type="xs:string" name="name" minOccurs="0"/>
+      <xs:element type="countryType" name="country" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contact-infoType">
+    <xs:sequence>
+      <xs:element name="phone1" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="fax" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="locationsType">
+    <xs:sequence>
+      <xs:element type="locationType" name="location" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="companyType">
+    <xs:sequence>
+      <xs:element type="xs:int" name="id" minOccurs="0"/>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element name="universal-name" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="statusType" name="status" minOccurs="0"/>
+      <xs:element name="logo-url" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:anyURI"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="website-url" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:anyURI"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="blog-rss-url" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:anyURI"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="twitter-id" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="employee-count-rangeType" name="employee-count-range" minOccurs="0"/>
+      <xs:element type="industriesType" name="industries" minOccurs="0"/>
+      <xs:element type="specialtiesType" name="specialties" minOccurs="0"/>
+      <xs:element type="locationsType" name="locations" minOccurs="0"/>
+      <xs:element name="description" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="founded-year" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:short"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="num-followers" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:short"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="size" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="type" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="industry" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ticker" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="companiesType">
+    <xs:sequence>
+      <xs:element type="companyType" name="company" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:short" name="total"/>
+    <xs:attribute type="xs:byte" name="count"/>
+    <xs:attribute type="xs:byte" name="start"/>
+  </xs:complexType>
+  <xs:complexType name="company-searchType">
+    <xs:sequence>
+      <xs:element type="companiesType" name="companies"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="http-headerType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="value"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="headersType">
+    <xs:sequence>
+      <xs:element type="http-headerType" name="http-header"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="api-standard-profile-requestType">
+    <xs:sequence>
+      <xs:element type="xs:anyURI" name="url"/>
+      <xs:element type="headersType" name="headers"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="site-standard-profile-requestType">
+    <xs:sequence>
+      <xs:element type="xs:anyURI" name="url"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countryType">
+    <xs:sequence>
+      <xs:element name="code">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:string" name="id"/>
+      <xs:element type="xs:string" name="first-name"/>
+      <xs:element type="xs:string" name="last-name"/>
+      <xs:element type="xs:string" name="headline"/>
+      <xs:element type="xs:anyURI" name="picture-url"/>
+      <xs:element type="api-standard-profile-requestType" name="api-standard-profile-request"/>
+      <xs:element type="site-standard-profile-requestType" name="site-standard-profile-request"/>
+      <xs:element type="locationType" name="location"/>
+      <xs:element type="xs:string" name="industry"/>
+      <xs:element type="xs:byte" name="distance"/>
+      <xs:element type="relation-to-viewerType" name="relation-to-viewer"/>
+      <xs:element name="num-connections">
+        <xs:simpleType>
+          <xs:restriction base="xs:short"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="positionsType" name="positions"/>
+      <xs:element type="educationsType" name="educations"/>
+      <xs:element type="three-current-positionsType" name="three-current-positions"/>
+      <xs:element name="auth-token">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="connectionsType" name="connections"/>
+      <xs:element type="member-url-resourcesType" name="member-url-resources"/>
+      <xs:element type="member-groupsType" name="member-groups"/>
+      <xs:element type="xs:string" name="current-status"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="connectionsType">
+    <xs:sequence>
+      <xs:element type="personType" name="person" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="connectionType" name="connection" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total" use="optional"/>
+    <xs:attribute type="xs:byte" name="count" use="optional"/>
+    <xs:attribute type="xs:byte" name="start" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="errorType">
+    <xs:sequence>
+      <xs:element type="xs:short" name="status"/>
+      <xs:element type="xs:long" name="timestamp"/>
+      <xs:element type="xs:string" name="request-id"/>
+      <xs:element type="xs:byte" name="error-code"/>
+      <xs:element type="xs:string" name="message"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="connectionType">
+    <xs:sequence>
+      <xs:element type="personType" name="person"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="relation-to-viewerType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="distance"/>
+      <xs:element type="connectionsType" name="connections"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="start-dateType">
+    <xs:sequence>
+      <xs:element name="year">
+        <xs:simpleType>
+          <xs:restriction base="xs:short"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="month" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="positionType">
+    <xs:sequence>
+      <xs:element type="xs:int" name="id"/>
+      <xs:element type="xs:string" name="title"/>
+      <xs:element name="summary" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="start-dateType" name="start-date"/>
+      <xs:element type="end-dateType" name="end-date" minOccurs="0"/>
+      <xs:element name="is-current">
+        <xs:simpleType>
+          <xs:restriction base="xs:boolean"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="companyType" name="company"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="end-dateType">
+    <xs:sequence>
+      <xs:element name="year">
+        <xs:simpleType>
+          <xs:restriction base="xs:short"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="month" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="positionsType">
+    <xs:sequence>
+      <xs:element type="positionType" name="position" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total"/>
+  </xs:complexType>
+  <xs:complexType name="educationType">
+    <xs:sequence>
+      <xs:element name="id">
+        <xs:simpleType>
+          <xs:restriction base="xs:int"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="school-name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="notes" minOccurs="0"/>
+      <xs:element type="xs:string" name="activities" minOccurs="0"/>
+      <xs:element name="degree">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="field-of-study">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="start-dateType" name="start-date"/>
+      <xs:element type="end-dateType" name="end-date"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="educationsType">
+    <xs:sequence>
+      <xs:element type="educationType" name="education" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total"/>
+  </xs:complexType>
+  <xs:complexType name="three-current-positionsType">
+    <xs:sequence>
+      <xs:element type="positionType" name="position" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="peopleType">
+    <xs:sequence>
+      <xs:element type="personType" name="person" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total"/>
+    <xs:attribute type="xs:byte" name="count"/>
+    <xs:attribute type="xs:byte" name="start"/>
+  </xs:complexType>
+  <xs:complexType name="people-searchType">
+    <xs:sequence>
+      <xs:element type="peopleType" name="people"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="update-contentType">
+    <xs:sequence>
+      <xs:element type="personType" name="person"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="update-commentsType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:byte" name="total" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="updateType">
+    <xs:sequence>
+      <xs:element name="timestamp">
+        <xs:simpleType>
+          <xs:restriction base="xs:long"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="update-key">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="update-type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="CONN"/>
+            <xs:enumeration value="NCON"/>
+            <xs:enumeration value="PROF"/>
+            <xs:enumeration value="JGRP"/>
+            <xs:enumeration value="STAT"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="update-contentType" name="update-content"/>
+      <xs:element type="xs:string" name="is-commentable"/>
+      <xs:element type="update-commentsType" name="update-comments"/>
+      <xs:element type="updated-fieldsType" name="updated-fields" minOccurs="0"/>
+      <xs:element type="xs:string" name="is-likable"/>
+      <xs:element type="xs:string" name="is-liked"/>
+      <xs:element name="num-likes">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="likesType" name="likes" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="member-url-resource-typeType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="code"/>
+      <xs:element type="xs:string" name="name"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="member-url-resourceType">
+    <xs:sequence>
+      <xs:element name="url">
+        <xs:simpleType>
+          <xs:restriction base="xs:anyURI"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="member-url-resource-typeType" name="member-url-resource-type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="member-url-resourcesType">
+    <xs:sequence>
+      <xs:element type="member-url-resourceType" name="member-url-resource" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="count"/>
+  </xs:complexType>
+  <xs:complexType name="update-fieldType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updated-fieldsType">
+    <xs:sequence>
+      <xs:element type="update-fieldType" name="update-field"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="count"/>
+  </xs:complexType>
+  <xs:complexType name="site-group-requestType">
+    <xs:sequence>
+      <xs:element type="xs:anyURI" name="url"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="member-groupType">
+    <xs:sequence>
+      <xs:element type="xs:int" name="id"/>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="site-group-requestType" name="site-group-request"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="member-groupsType">
+    <xs:sequence>
+      <xs:element type="member-groupType" name="member-group"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total"/>
+  </xs:complexType>
+  <xs:complexType name="likeType">
+    <xs:sequence>
+      <xs:element type="personType" name="person"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="likesType">
+    <xs:sequence>
+      <xs:element type="likeType" name="like" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total"/>
+  </xs:complexType>
+  <xs:complexType name="updatesType">
+    <xs:sequence>
+      <xs:element type="updateType" name="update" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="total"/>
+    <xs:attribute type="xs:byte" name="count"/>
+    <xs:attribute type="xs:byte" name="start"/>
+  </xs:complexType>
+</xs:schema>

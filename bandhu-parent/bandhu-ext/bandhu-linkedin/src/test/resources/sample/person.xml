@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<person>
+  <id>U01_u5N6FY</id>
+  <first-name>Rajarshi</first-name>
+  <last-name>Sharma</last-name>
+  <headline>Senior Engineer at Mindtree, Bangalore</headline>
+  <location>
+    <name>Bengaluru Area, India</name>
+    <country>
+      <code>in</code>
+    </country>
+  </location>
+  <api-standard-profile-request>
+    <url>http://api.linkedin.com/v1/people/U01_u5N6FY</url>
+    <headers total="1">
+      <http-header>
+        <name>x-li-auth-token</name>
+        <value>name:8VOX</value>
+      </http-header>
+    </headers>
+  </api-standard-profile-request>
+  <site-standard-profile-request>
+    <url>http://www.linkedin.com/profile?viewProfile=&amp;key=30929795&amp;authToken=8VOX&amp;authType=name&amp;trk=api*a128468*s136878*</url>
+  </site-standard-profile-request>
+  <distance>1</distance>
+  <relation-to-viewer>
+    <distance>1</distance>
+    <connections total="16" count="10" start="0">
+      <connection>
+        <person>
+          <id>dXnoNWOR-o</id>
+          <first-name>Ranjith</first-name>
+          <last-name>Yermal</last-name>
+        </person>
+      </connection>
+      <connection>
+        <person>
+          <id>3s-kX61SKv</id>
+          <first-name>Nischal</first-name>
+          <last-name>Shetty</last-name>
+        </person>
+      </connection>
+      <connection>
+        <person>
+          <id>UMdhYXfmDk</id>
+          <first-name>Naveen</first-name>
+          <last-name>Nair</last-name>
+        </person>
+      </connection>
+      <connection>
+        <person>
+          <id>qLxnaV9CmE</id>
+          <first-name>sandeep</first-name>
+          <last-name>paul</last-name>
+        </person>
+      </connection>
+      <connection>
+        <person>
+          <id>dUA_Ol8BbC</id>
+          <first-name>Gireesh</first-name>
+          <last-name>Subramonian</last-name>
+        </person>
+      </connection>
+      <connection>
+        <person>
+          <id>W4TvGDcEg-</id>
+          <first-name>Raju</first-name>
+          <last-name>Upadhyay</last-name>
+        </person>
+      </connection>
+      <connection>
+        <person>
+          <id>HRe1ZycBFh</id>
+          <first-name>praveen</first-name>
+          <last-name>kurnool</last-name>
+        </person>
+      </connection>
+      <connection>
+        <person>
+          <id>9fIu1c5ijX</id>
+          <first-name>Suresh</first-name>
+          <last-name>Nardas</last-name>
+        </person>
+      </connection>
+      <connection>
+        <person>
+          <id>SqXkODiZlo</id>
+          <first-name>Praveen</first-name>
+          <last-name>Nayak</last-name>
+        </person>
+      </connection>
+      <connection>
+        <person>
+          <id>P1Rc-jiiA6</id>
+          <first-name>Subhashish</first-name>
+          <last-name>Samant</last-name>
+        </person>
+      </connection>
+    </connections>
+  </relation-to-viewer>
+  <num-connections>116</num-connections>
+  <positions total="2">
+    <position>
+      <id>85143179</id>
+      <title>Senior Engineer</title>
+      <summary></summary>
+      <start-date>
+        <year>2010</year>
+        <month>5</month>
+      </start-date>
+      <is-current>true</is-current>
+      <company>
+        <id>4300</id>
+        <name>MindTree Ltd.</name>
+        <type>Public Company</type>
+        <industry>Information Technology and Services</industry>
+        <ticker>MINDTREE</ticker>
+      </company>
+    </position>
+    <position>
+      <id>123121922</id>
+      <title>Software Engineer</title>
+      <summary></summary>
+      <start-date>
+        <year>2007</year>
+        <month>6</month>
+      </start-date>
+      <end-date>
+        <year>2010</year>
+        <month>5</month>
+      </end-date>
+      <is-current>false</is-current>
+      <company>
+        <id>162214</id>
+        <name>3i Infotech</name>
+        <type>Public Company</type>
+        <industry>Information Technology and Services</industry>
+      </company>
+    </position>
+  </positions>
+  <educations total="5">
+    <education>
+      <id>31068715</id>
+      <school-name>Mallabhum Institute of Technology</school-name>
+      <notes></notes>
+      <activities></activities>
+      <degree>B.Tech.</degree>
+      <field-of-study>Computer Science and Engineering</field-of-study>
+      <start-date>
+        <year>2002</year>
+      </start-date>
+      <end-date>
+        <year>2006</year>
+      </end-date>
+    </education>
+    <education>
+      <id>24968274</id>
+      <school-name>West Bengal University of Technology</school-name>
+      <notes></notes>
+      <activities></activities>
+      <degree>B.tech.</degree>
+      <field-of-study>Computer Sc and Engg.</field-of-study>
+      <start-date>
+        <year>2002</year>
+      </start-date>
+      <end-date>
+        <year>2006</year>
+      </end-date>
+    </education>
+    <education>
+      <id>37795976</id>
+      <school-name>Kohima Science College</school-name>
+      <degree></degree>
+      <field-of-study></field-of-study>
+      <start-date>
+        <year>2000</year>
+      </start-date>
+      <end-date>
+        <year>2002</year>
+      </end-date>
+    </education>
+    <education>
+      <id>46118321</id>
+      <school-name>Kohima Science College</school-name>
+      <degree></degree>
+      <field-of-study></field-of-study>
+      <start-date>
+        <year>2000</year>
+      </start-date>
+      <end-date>
+        <year>2002</year>
+      </end-date>
+    </education>
+    <education>
+      <id>46118382</id>
+      <school-name>Holy Cross School Dimapur</school-name>
+      <degree></degree>
+      <field-of-study></field-of-study>
+      <start-date>
+        <year>1994</year>
+      </start-date>
+      <end-date>
+        <year>2000</year>
+      </end-date>
+    </education>
+  </educations>
+</person>

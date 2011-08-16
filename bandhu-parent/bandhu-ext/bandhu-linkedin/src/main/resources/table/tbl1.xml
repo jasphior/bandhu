@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<update>
+	<timestamp>1312788987000</timestamp>
+	<update-key>CONN-6907612-*2-*1</update-key>
+	<update-type>CONN</update-type>
+	<update-content>
+		<person>
+			<id>_xbHzSKh5g</id>
+			<first-name>Preejith</first-name>
+			<last-name>PS</last-name>
+			<headline>Associate Manager - HR at Symphony Services</headline>
+			<connections total="1">
+				<person>
+					<id>NsFVXn57-L</id>
+					<auth-token>name:DAjg</auth-token>
+					<first-name>Sivathanu</first-name>
+					<last-name>N</last-name>
+					<headline>Process Trainer at RedEgg InfoExpert Technologies Pvt.
+						Ltd.</headline>
+					<picture-url>http://media.linkedin.com/mpr/mprx/0_OurBLBoMadLYFgU4yo3XLzW4uW8aFOo4yaXHLqEbPuNO4sjZtEhUwNOWCFhAkJIq07-WoPZ2B19g
+					</picture-url>
+					<api-standard-profile-request>
+						<url>http://api.linkedin.com/v1/people/NsFVXn57-L</url>
+						<headers total="1">
+							<http-header>
+								<name>x-li-auth-token</name>
+								<value>name:DAjg</value>
+							</http-header>
+						</headers>
+					</api-standard-profile-request>
+					<site-standard-profile-request>
+						<url>http://www.linkedin.com/profile?viewProfile=&amp;key=38600118&amp;authToken=DAjg&amp;authType=name&amp;trk=api*a128468*s136878*
+						</url>
+					</site-standard-profile-request>
+				</person>
+			</connections>
+			<picture-url>http://media.linkedin.com/mpr/mprx/0_XUxLRHiUbb4VTeYDQpu9RwTvbFIq_mmDQJwsRwr5ZG0XyoMSeg7dvIkwWWwIhW73LZgRq2Ghm8yj
+			</picture-url>
+			<api-standard-profile-request>
+				<url>http://api.linkedin.com/v1/people/_xbHzSKh5g</url>
+				<headers total="1">
+					<http-header>
+						<name>x-li-auth-token</name>
+						<value>name:Dy_r</value>
+					</http-header>
+				</headers>
+			</api-standard-profile-request>
+			<site-standard-profile-request>
+				<url>http://www.linkedin.com/profile?viewProfile=&amp;key=6907612&amp;authToken=Dy_r&amp;authType=name&amp;trk=api*a128468*s136878*
+				</url>
+			</site-standard-profile-request>
+		</person>
+	</update-content>
+	<is-commentable>true</is-commentable>
+	<update-comments total="0" />
+	<is-likable>true</is-likable>
+	<is-liked>false</is-liked>
+	<num-likes>0</num-likes>
+</update>

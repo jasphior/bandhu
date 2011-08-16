@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<people-search>
+  <people total="110" count="10" start="0">
+    <person>
+      <id>gWE2FNVdoZ</id>
+      <first-name>Arjun</first-name>
+      <last-name>Khanna</last-name>
+      <three-current-positions total="1">
+        <position>
+          <id>71585056</id>
+          <title>CEO Zeus Consulting</title>
+          <summary>I have been promoted as Head-Operations at Zeus Consulting. I am handling the entire gamut of HR activities including Training, Performance Management, Recruitment, Business Development, Employee Engagement, Rewards &amp; Recognition, Employee Relations, HR Policies &amp; Strategies etc.</summary>
+          <start-date>
+            <year>2006</year>
+            <month>5</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <id>338551</id>
+            <name>Zeus Consulting</name>
+            <type>Privately Held</type>
+            <industry>Human Resources</industry>
+          </company>
+        </position>
+      </three-current-positions>
+      <industry>Human Resources</industry>
+      <location>
+        <name>New Delhi Area, India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>500</num-connections>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>_mapbUdjdz</id>
+      <first-name>Shweta Madaan</first-name>
+      <last-name>LION</last-name>
+      <three-current-positions total="3">
+        <position>
+          <id>116571081</id>
+          <title>Placements</title>
+          <summary></summary>
+          <start-date>
+            <year>2010</year>
+            <month>1</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <id>657676</id>
+            <name>Sharda University</name>
+            <type>Educational Institution</type>
+            <industry>Education Management</industry>
+          </company>
+        </position>
+        <position>
+          <id>35007187</id>
+          <title>Director</title>
+          <start-date>
+            <year>2008</year>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <id>120488</id>
+            <name>OTS Solutions</name>
+            <industry>Information Technology and Services</industry>
+          </company>
+        </position>
+        <position>
+          <id>21485559</id>
+          <title>Staffing</title>
+          <start-date>
+            <year>2004</year>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <id>1467</id>
+            <name>NCR</name>
+            <type>Public Company</type>
+            <industry>Information Technology and Services</industry>
+          </company>
+        </position>
+      </three-current-positions>
+      <industry>Staffing and Recruiting</industry>
+      <location>
+        <name>Gurgaon, India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>500</num-connections>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>YAAPdw89E3</id>
+      <first-name>Madhu</first-name>
+      <last-name>Nakkala</last-name>
+      <three-current-positions total="1">
+        <position>
+          <id>7290903</id>
+          <title>Manager-Talent Acquisition</title>
+          <summary></summary>
+          <start-date>
+            <year>2005</year>
+            <month>4</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <id>6023</id>
+            <name>Applabs Technologies,Hyderabad</name>
+            <type>Privately Held</type>
+            <industry>Information Technology and Services</industry>
+          </company>
+        </position>
+      </three-current-positions>
+      <industry>Information Technology and Services</industry>
+      <location>
+        <name>Hyderabad Area, India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>500</num-connections>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>Felh9ic8Se</id>
+      <first-name>Aditi</first-name>
+      <last-name>Bhandari</last-name>
+      <three-current-positions total="1">
+        <position>
+          <id>82222719</id>
+          <title>Talent &amp; Performance Advisor</title>
+          <summary></summary>
+          <start-date>
+            <year>2009</year>
+            <month>7</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <name>Barclays Technology Centre India</name>
+            <industry>Information Technology and Services</industry>
+          </company>
+        </position>
+      </three-current-positions>
+      <industry>Information Technology and Services</industry>
+      <location>
+        <name>Pune Area, India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>500</num-connections>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>AqS9mq930x</id>
+      <first-name>Jagadamba</first-name>
+      <last-name>B</last-name>
+      <three-current-positions total="2">
+        <position>
+          <id>22550684</id>
+          <title>Principal Recruiter</title>
+          <start-date>
+            <year>2007</year>
+            <month>9</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <id>1512</id>
+            <name>Target Corporation</name>
+            <type>Public Company</type>
+            <industry>Retail</industry>
+            <ticker>TGT</ticker>
+          </company>
+        </position>
+        <position>
+          <id>116757041</id>
+          <title>Sr Recruiter</title>
+          <summary>•	Responsible for senior leadership hiring - Delivery Managers, Group Managers, Directors, Vice Presidents.
+•	End to End hiring for senior leadership team from sourcing to closure of the requisition.
+•	Responsible for end to end hiring across levels for two business units.   
+•	Extensive interaction with hiring managers to get an in depth understanding of positions, candidate profiles etc.
+•	Effectively managed mass recruitment for the largest cluster of business units with the highest levels of conversions 
+•	Well known for ramping up new teams from scratch even during high pressure and less turn around time.
+•	Reduced cost per hire through effective sourcing strategies.
+•	Developed a comprehensive structure for Talent Acquisition team.
+•	Various strategies for effective hiring and analysis and reduce cost.
+•	Good experience in recruitment metrics and managed the analysis by coming up with various reports like MIS- management information system, cost per hire etc.
+•	Initiated various initiatives to improve referral program &amp; save on hiring costs.
+•	Managed projects like Pre-employment check, Info security, Quality of hire and Sourcing strategies.</summary>
+          <start-date>
+            <year>2007</year>
+            <month>9</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <id>1512</id>
+            <name>Target Corporation</name>
+            <size>10,001+ employees</size>
+            <type>Public Company</type>
+            <industry>Staffing and Recruiting</industry>
+            <ticker>TGT</ticker>
+          </company>
+        </position>
+      </three-current-positions>
+      <industry>Staffing and Recruiting</industry>
+      <location>
+        <name>Bengaluru Area, India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>500</num-connections>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>4H9np6gIzg</id>
+      <first-name>Anitha</first-name>
+      <last-name>Singh</last-name>
+      <three-current-positions total="1">
+        <position>
+          <id>81190656</id>
+          <title>Consultant</title>
+          <summary>Sandton Group Limited is a Global Executive Search firm headquartered in the City of London and specializes in high-level executive search for Banking &amp; Financial Services and IT/ITES. 
+
+We execute search assignments in the following key geographies: 
+London &amp; Pan-European region, North America, Emerging Markets (Eastern Europe, Latin America, South Africa) and Asia Pacific.</summary>
+          <start-date>
+            <year>2009</year>
+            <month>7</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <name>Sandton Executive Search India Pvt. Ltd.</name>
+            <industry>Staffing and Recruiting</industry>
+          </company>
+        </position>
+      </three-current-positions>
+      <industry>Staffing and Recruiting</industry>
+      <location>
+        <name>Bengaluru Area, India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>500</num-connections>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>-VSYzDjCys</id>
+      <first-name>Bhamini</first-name>
+      <last-name>Bhat</last-name>
+      <three-current-positions total="1">
+        <position>
+          <id>40482573</id>
+          <title>Senior IT Recruiter</title>
+          <start-date>
+            <year>2007</year>
+            <month>11</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <name>Pronext Consulting</name>
+            <size>1-10 employees</size>
+            <type>Privately Held</type>
+            <industry>Staffing and Recruiting</industry>
+          </company>
+        </position>
+      </three-current-positions>
+      <industry>Human Resources</industry>
+      <location>
+        <name>Bengaluru Area, India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>500</num-connections>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>2bXcrgnYro</id>
+      <first-name>suresh</first-name>
+      <last-name>kumar</last-name>
+      <three-current-positions total="0" />
+      <location>
+        <name>India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>5</num-connections>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>7lZBvHikm5</id>
+      <first-name>Rakshit</first-name>
+      <last-name>Harbola</last-name>
+      <three-current-positions total="1">
+        <position>
+          <id>152240881</id>
+          <title>Key Account Lead</title>
+          <summary></summary>
+          <start-date>
+            <year>2010</year>
+            <month>10</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <id>1475253</id>
+            <name>STEPS</name>
+            <type>Privately Held</type>
+            <industry>Management Consulting</industry>
+          </company>
+        </position>
+      </three-current-positions>
+      <industry>Human Resources</industry>
+      <location>
+        <name>New Delhi Area, India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>500</num-connections>
+      <distance>1</distance>
+    </person>
+    <person>
+      <id>R3KXmGO3Gz</id>
+      <first-name>Sushma</first-name>
+      <last-name>Belkar</last-name>
+      <three-current-positions total="1">
+        <position>
+          <id>135157487</id>
+          <title>Talent Acquisition Specialist</title>
+          <summary>Looking after End to End Recruitment process for the company.</summary>
+          <start-date>
+            <year>2010</year>
+            <month>5</month>
+          </start-date>
+          <is-current>true</is-current>
+          <company>
+            <id>11399</id>
+            <name>Narus Networks Pvt ltd</name>
+            <type>Privately Held</type>
+            <industry>Computer Software</industry>
+          </company>
+        </position>
+      </three-current-positions>
+      <industry>Computer &amp; Network Security</industry>
+      <location>
+        <name>Bengaluru Area, India</name>
+        <country>
+          <code>in</code>
+        </country>
+      </location>
+      <num-connections>500</num-connections>
+      <distance>1</distance>
+    </person>
+  </people>
+</people-search>
