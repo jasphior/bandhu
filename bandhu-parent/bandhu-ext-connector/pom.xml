@@ -3,32 +3,32 @@
 	<parent>
 		<artifactId>bandhu-parent</artifactId>
 		<groupId>org.bandhu</groupId>
-		<version>${bandhu.version}</version>
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bandhu</groupId>
 	<artifactId>bandhu-ext-connector</artifactId>
-	<version>${bandhu.version}</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.bandhu</groupId>
 			<artifactId>bandhu-core</artifactId>
-			<version>${bandhu.version}</version>
+			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bandhu.ext</groupId>
 			<artifactId>bandhu-linkedin</artifactId>
-			<version>${bandhu.version}</version>
+			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bandhu.ext</groupId>
 			<artifactId>bandhu-twitter</artifactId>
-			<version>${bandhu.version}</version>
+			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bandhu.ext</groupId>
 			<artifactId>bandhu-fb</artifactId>
-			<version>${bandhu.version}</version>
+			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>

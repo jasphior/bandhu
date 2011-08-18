@@ -2,13 +2,13 @@ package org.bandhu.ext.service.twitter;
 
 import java.util.List;
 
-import org.bandhu.core.rest.sp.ServiceProvider;
-import org.bandhu.core.rest.sp.ServiceProviderService;
+import org.bandhu.core.rest.sp.RESTServiceProvider;
+import org.bandhu.core.rest.sp.RESTServiceProviderService;
 import org.bandhu.core.rest.sp.SimpleSPService;
 import org.bandhu.util.BandhuUtil.Method;
 import org.bandhu.util.BandhuUtil.Protocol;
 
-public class TwitterSP implements ServiceProvider {
+public class TwitterSP implements RESTServiceProvider {
     @Override
     public String getServiceName() {
         return "Twitter";
@@ -25,25 +25,28 @@ public class TwitterSP implements ServiceProvider {
     }
 
     @Override
-    public ServiceProviderService getRequestTokenEndpoint() {
+    public RESTServiceProviderService getRequestTokenEndpoint() {
         return new SimpleSPService(Protocol.HTTPS, Method.GET,
-                "https://api.twitter.com/oauth/request_token", String.class, 0);
+                "https://api.twitter.com/oauth/request_token", String.class,
+                false, 0);
     }
 
     @Override
-    public ServiceProviderService getAuthorizeTokenEndpoint() {
+    public RESTServiceProviderService getAuthorizeTokenEndpoint() {
         return new SimpleSPService(Protocol.HTTPS, Method.GET,
-                "https://api.twitter.com/oauth/authorize", String.class, 0);
+                "https://api.twitter.com/oauth/authorize", String.class, false,
+                0);
     }
 
     @Override
-    public ServiceProviderService getAccessTokenEndpoint() {
+    public RESTServiceProviderService getAccessTokenEndpoint() {
         return new SimpleSPService(Protocol.HTTPS, Method.GET,
-                "https://api.twitter.com/oauth/access_token", String.class, 0);
+                "https://api.twitter.com/oauth/access_token", String.class,
+                false, 0);
     }
 
     @Override
-    public <S extends ServiceProviderService> List<S> getServices() {
+    public <S extends RESTServiceProviderService> List<S> getServices() {
         // TODO Auto-generated method stub
         return null;
     }

@@ -3,13 +3,13 @@ package org.bandhu.ext.linkedin.service;
 import java.util.Arrays;
 import java.util.List;
 
-import org.bandhu.core.rest.sp.ServiceProvider;
-import org.bandhu.core.rest.sp.ServiceProviderService;
+import org.bandhu.core.rest.sp.RESTServiceProvider;
+import org.bandhu.core.rest.sp.RESTServiceProviderService;
 import org.bandhu.core.rest.sp.SimpleSPService;
 import org.bandhu.util.BandhuUtil.Method;
 import org.bandhu.util.BandhuUtil.Protocol;
 
-public class LinkedInSP implements ServiceProvider {
+public class LinkedInSP implements RESTServiceProvider {
     private static final String requestToken = "https://api.linkedin.com/uas/oauth/requestToken";
     private static final String authorize = "https://api.linkedin.com/uas/oauth/authorize";
     private static final String accessToken = "https://api.linkedin.com/uas/oauth/accessToken";
@@ -27,26 +27,26 @@ public class LinkedInSP implements ServiceProvider {
     }
 
     @Override
-    public ServiceProviderService getRequestTokenEndpoint() {
+    public RESTServiceProviderService getRequestTokenEndpoint() {
         return new SimpleSPService(Protocol.HTTPS, Method.GET, requestToken,
-                String.class, 0);
+                String.class, false, 0);
     }
 
     @Override
-    public ServiceProviderService getAuthorizeTokenEndpoint() {
+    public RESTServiceProviderService getAuthorizeTokenEndpoint() {
         return new SimpleSPService(Protocol.HTTPS, Method.GET, authorize,
-                String.class, 0);
+                String.class, false, 0);
     }
 
     @Override
-    public ServiceProviderService getAccessTokenEndpoint() {
+    public RESTServiceProviderService getAccessTokenEndpoint() {
         return new SimpleSPService(Protocol.HTTPS, Method.GET, accessToken,
-                String.class, 0);
+                String.class, false, 0);
     }
 
     @Override
-    public List<LinkedInSPServices> getServices() {
-        List<LinkedInSPServices> list = Arrays.asList(LinkedInSPServices
+    public List<LinkedInSPService> getServices() {
+        List<LinkedInSPService> list = Arrays.asList(LinkedInSPService
                 .values());
         return list;
     }

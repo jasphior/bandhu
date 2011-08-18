@@ -9,7 +9,7 @@ import org.bandhu.util.BandhuUtil;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
-public abstract class BandhuRESTService extends ServiceAccessor {
+public class BandhuRESTService extends ServiceAccessor {
 
     public BandhuRESTService(String id, Consumer consumer) {
         super(id, consumer);

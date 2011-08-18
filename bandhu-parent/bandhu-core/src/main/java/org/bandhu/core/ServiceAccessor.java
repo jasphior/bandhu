@@ -15,19 +15,19 @@ public abstract class ServiceAccessor {
         this.consumer = consumer;
     }
 
-    String getId() {
+    public String getId() {
         return id;
     }
 
-    void setId(String id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    Consumer getConsumer() {
+    public Consumer getConsumer() {
         return consumer;
     }
 
-    void setConsumer(Consumer consumer) {
+    public void setConsumer(Consumer consumer) {
         this.consumer = consumer;
     }
 

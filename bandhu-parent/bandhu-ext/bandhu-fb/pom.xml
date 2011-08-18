@@ -4,11 +4,11 @@
 	<parent>
 		<artifactId>bandhu-ext</artifactId>
 		<groupId>org.bandhu.ext</groupId>
-		<version>${bandhu.version}</version>
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 	<groupId>org.bandhu.ext</groupId>
 	<artifactId>bandhu-fb</artifactId>
-	<version>${bandhu.version}</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
 			<groupId>com.restfb</groupId>

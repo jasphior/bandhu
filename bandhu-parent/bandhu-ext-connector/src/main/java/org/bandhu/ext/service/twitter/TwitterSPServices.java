@@ -1,36 +1,41 @@
 package org.bandhu.ext.service.twitter;
 
-import org.bandhu.core.rest.sp.ServiceProviderService;
+import org.bandhu.core.rest.sp.RESTServiceProviderService;
 import org.bandhu.util.BandhuUtil.Method;
 import org.bandhu.util.BandhuUtil.Protocol;
 
-public enum TwitterSPServices implements ServiceProviderService {
+public enum TwitterSPServices implements RESTServiceProviderService {
     POSTING_LIKES(
             Protocol.HTTP,
             Method.PUT,
             "http://api.linkedin.com/v1/people/~/network/updates/key={0}/is-liked",
-            String.class, 1);
+            String.class, false, 1);
 
     private Protocol protocol;
     private Method method;
     private String url;
     private Class<?> entity;
     private int urlParams;
+    private boolean authenticationRequired;
 
     TwitterSPServices(final Protocol protocol, final Method method,
-            final String url, final Class<?> entity) {
+            final String url, final Class<?> entity,
+            boolean authenticationRequired) {
         this.protocol = protocol;
         this.method = method;
         this.url = url;
         this.entity = entity;
+        this.authenticationRequired = authenticationRequired;
     }
 
     TwitterSPServices(final Protocol protocol, final Method method,
-            final String url, final Class<?> entity, int urlParams) {
+            final String url, final Class<?> entity,
+            boolean authenticationRequired, int urlParams) {
         this.protocol = protocol;
         this.method = method;
         this.url = url;
         this.entity = entity;
+        this.authenticationRequired = authenticationRequired;
         this.urlParams = urlParams;
     }
 
@@ -54,4 +59,7 @@ public enum TwitterSPServices implements ServiceProviderService {
         return urlParams;
     }
 
+    public boolean isAuthenticationRequired() {
+        return authenticationRequired;
+    }
 }

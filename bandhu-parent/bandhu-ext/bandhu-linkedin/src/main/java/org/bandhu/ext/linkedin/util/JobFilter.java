@@ -1,6 +1,6 @@
 package org.bandhu.ext.linkedin.util;
 
-public class JobFilter extends LinkedInFilter {
+public class JobFilter extends Filter {
 
     /** company-name=[company-name] */
     private String companyName;
@@ -29,12 +29,12 @@ public class JobFilter extends LinkedInFilter {
         if (companyName != null) {
             builder.append("company-name=");
             builder.append(companyName);
-            builder.append(seperator);
+            builder.append(SEPERATOR);
         }
         if (jobTitle != null) {
             builder.append("job-title=");
             builder.append(jobTitle);
-            builder.append(seperator);
+            builder.append(SEPERATOR);
         }
         return builder.toString();
     }

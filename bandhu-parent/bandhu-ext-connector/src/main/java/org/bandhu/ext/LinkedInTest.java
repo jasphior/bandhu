@@ -10,15 +10,24 @@ import org.bandhu.core.rest.oauth.OAuthConsumer;
 import org.bandhu.core.rest.oauth.OAuthRequest;
 import org.bandhu.core.rest.oauth.OAuthService;
 import org.bandhu.core.rest.oauth.OAuthToken;
+import org.bandhu.ext.linkedin.jaxb.AuthorizationType;
 import org.bandhu.ext.linkedin.jaxb.ConnectionsType;
 import org.bandhu.ext.linkedin.jaxb.HttpHeaderType;
+import org.bandhu.ext.linkedin.jaxb.InvitationRequestType;
+import org.bandhu.ext.linkedin.jaxb.ItemContentType;
+import org.bandhu.ext.linkedin.jaxb.JobBookmarkType;
+import org.bandhu.ext.linkedin.jaxb.JobType;
+import org.bandhu.ext.linkedin.jaxb.MailboxItemType;
 import org.bandhu.ext.linkedin.jaxb.PeopleSearchType;
 import org.bandhu.ext.linkedin.jaxb.PersonType;
+import org.bandhu.ext.linkedin.jaxb.RecipientType;
+import org.bandhu.ext.linkedin.jaxb.RecipientsType;
 import org.bandhu.ext.linkedin.jaxb.UpdateType;
 import org.bandhu.ext.linkedin.jaxb.UpdatesType;
 import org.bandhu.ext.linkedin.service.LinkedInSP;
-import org.bandhu.ext.linkedin.service.LinkedInSPServices;
+import org.bandhu.ext.linkedin.service.LinkedInSPService;
 import org.bandhu.ext.linkedin.util.JobFilter;
+import org.bandhu.ext.linkedin.util.LinkedInXMLBuilder;
 import org.bandhu.ext.linkedin.util.PersonFilter;
 import org.bandhu.util.BandhuException;
 
@@ -61,7 +70,7 @@ public class LinkedInTest {
         String option = "y";
         // scanner.nextLine();
         if (Boolean.valueOf(option.equals("y"))) {
-            System.out.println("Useing session...");
+            System.out.println("Using session...");
             service = new OAuthService(oAuthConsumer, LinkedInSP.class);
             OAuthToken accessToken = new OAuthToken(
                     properties.getProperty(OAuthParameters.TOKEN),
@@ -71,26 +80,109 @@ public class LinkedInTest {
             service = new OAuthService(oAuthConsumer, LinkedInSP.class);
             verifyGetAccessToken(service);
         }
-        // fetchUpdates(service);
-        // searchPeople(service);
-        // getProfile(service);
-        // getProfileSelect(service);
-        // fetchConnections(service);
-        // fetchConnectionsSelect(service); Access to other member's connections
-        // denied
-        // searchCompany(service);
-        // getProfileSelect(service, "U01_u5N6FY", "x-li-auth-token",
-        // "name:8VOX");
-        // suggestCompanies(service);
-        // fetchCompanyProducts(service);
-        // findJobs(service);
-        // getBookmarkedJobs(service);
+        fetchUpdates(service);
+        getProfile(service);
+        getProfileSelect(service, "bXJUPUibw6", "x-li-auth-token",
+                "OUT_OF_NETWORK:wz1i");
+
+        String s = "y";
+        do {
+            System.out.println("feed id & header value");
+            getProfileSelectConnected(service, scanner.nextLine(),
+                    "x-li-auth-token", scanner.nextLine());
+            System.out.println("dig more??");
+        } while (scanner.nextLine().equals(s));
+
+        getProfileSelect(service, "NxMAvPejV7", "x-li-auth-token",
+                "OUT_OF_NETWORK:iT34");
+        getProfileSelectPublic(service,
+                "http://api.linkedin.com/v1/people/X5Nwi4gEPk");
+        fetchConnections(service);
+        fetchConnectionsSelect(service);
+        // Access to other member's connections denied
+        searchPeople(service);
+        searchCompany(service);
+        searchJob(service);
+        fetchCompanyProducts(service);
+        getBookmarkedJobs(service);
+        bookmarkJob(service);
+        suggestCompanies(service);
         suggestJobs(service);
+        postShare(service);
+        sendMessage(service);
+        sendInvite(service);
+    }
+
+    private static void sendInvite(OAuthService service) throws BandhuException {
+
+        MailboxItemType mailbox = new MailboxItemType();
+        RecipientsType recipients = new RecipientsType();
+        RecipientType recipient = new RecipientType();
+        PersonType person = new PersonType();
+        recipient.setPerson(person);
+        person.setPath("/people/id=vIlO2NShsA");
+        recipients.setRecipient(recipient);
+        mailbox.setRecipients(recipients);
+        mailbox.setSubject("Invitation to join my network!!");
+        mailbox.setBody("Hi!! I would like to add you to my network!!");
+        ItemContentType itemContent = new ItemContentType();
+        InvitationRequestType invite = new InvitationRequestType();
+        invite.setConnectType("friend");
+        if (person.getPath().indexOf("email") == -1) {
+            AuthorizationType auth = new AuthorizationType();
+            auth.setName("OUT_OF_NETWORK");
+            auth.setValue("4Ghv");
+            invite.setAuthorization(auth);
+        }
+        itemContent.setInvitationRequest(invite);
+        mailbox.setItemContent(itemContent);
+        LinkedInSPService sendMessage = LinkedInSPService.POSTING_MESSAGE;
+        OAuthRequest msgRequest = service.createRequest(sendMessage);
+        msgRequest.setPayload(LinkedInXMLBuilder.toXML(mailbox));
+        ClientResponse resp = service.process(msgRequest);
+        System.out.println(resp.getEntity(String.class));
+    }
+
+    private static void sendMessage(OAuthService service)
+            throws BandhuException {
+
+        MailboxItemType mailbox = new MailboxItemType();
+        RecipientsType recipients = new RecipientsType();
+        RecipientType recipient = new RecipientType();
+        PersonType person = new PersonType();
+        recipient.setPerson(person);
+        person.setPath("/people/0ec6IiNQNN");
+        // person.setFirstName("Gopinath");
+        // person.setLastName("Lappasi");
+        recipients.setRecipient(recipient);
+        mailbox.setRecipients(recipients);
+        mailbox.setSubject("API Msg!!");
+        mailbox.setBody("Hi Gopi!!");
+
+        LinkedInSPService sendMessage = LinkedInSPService.POSTING_MESSAGE;
+        OAuthRequest msgRequest = service.createRequest(sendMessage);
+        msgRequest.setPayload(LinkedInXMLBuilder.toXML(mailbox));
+        ClientResponse resp = service.process(msgRequest);
+        System.out.println(resp.getEntity(String.class));
+    }
+
+    private static void postShare(OAuthService service) throws BandhuException {
+        LinkedInSPService jobSuggestion = LinkedInSPService.POSTING_SHARES;
+        OAuthRequest updateRequest = service.createRequest(jobSuggestion);
+        updateRequest
+                .setPayload("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+                        + " <share> <comment>83% of employers will use social media to hire: 78% LinkedIn, 55% Facebook, 45% Twitter [SF Biz Times] http://bit.ly/cCpeOD</comment>"
+                        + " <content> <title>Survey: Social networks top hiring tool - San Francisco Business Times</title> "
+                        + "<submitted-url>http://sanfrancisco.bizjournals.com/sanfrancisco/stories/2010/06/28/daily34.html</submitted-url>"
+                        + " <submitted-image-url>http://images.bizjournals.com/travel/cityscapes/thumbs/sm_sanfrancisco.jpg</submitted-image-url>"
+                        + "  </content>  <visibility>     <code>anyone</code>  </visibility></share>");
+        ClientResponse resp = service.process(updateRequest);
+        System.out.println(resp.getEntity(String.class));
     }
 
     private static void suggestJobs(OAuthService service)
             throws BandhuException {
-        LinkedInSPServices jobSuggestion = LinkedInSPServices.JOB_SUGGESTION;
+        LinkedInSPService jobSuggestion = LinkedInSPService.JOB_SUGGESTION;
         OAuthRequest updateRequest = service.createRequest(jobSuggestion);
         ClientResponse resp = service.process(updateRequest);
         System.out.println(resp.getEntity(String.class));
@@ -98,14 +190,30 @@ public class LinkedInTest {
 
     private static void getBookmarkedJobs(OAuthService service)
             throws BandhuException {
-        LinkedInSPServices jobBookmarked = LinkedInSPServices.JOB_BOOKMARKED;
+        LinkedInSPService jobBookmarked = LinkedInSPService.JOB_BOOKMARKED;
         OAuthRequest updateRequest = service.createRequest(jobBookmarked);
         ClientResponse resp = service.process(updateRequest);
         System.out.println(resp.getEntity(String.class));
     }
 
-    private static void findJobs(OAuthService service) throws BandhuException {
-        LinkedInSPServices jobSearch = LinkedInSPServices.JOB_SEARCH;
+    private static void bookmarkJob(OAuthService service)
+            throws BandhuException {
+
+        JobBookmarkType jobBookmark = new JobBookmarkType();
+        JobType jobType = new JobType();
+        jobType.setId(1745);
+        jobBookmark.setJob(jobType);
+        LinkedInSPService jobBookmarkService = LinkedInSPService.JOB_BOOKMARK;
+        OAuthRequest bookmarkRequest = service
+                .createRequest(jobBookmarkService);
+        bookmarkRequest.setPayload(LinkedInXMLBuilder.toXML(jobBookmark));
+        ClientResponse resp = service.process(bookmarkRequest);
+
+        System.out.println(resp.getEntity(String.class));
+    }
+
+    private static void searchJob(OAuthService service) throws BandhuException {
+        LinkedInSPService jobSearch = LinkedInSPService.JOB_SEARCH;
         JobFilter jobFilter = new JobFilter();
         jobFilter.setCountryCode("in");
         OAuthRequest updateRequest = service.createRequest(jobSearch, null,
@@ -116,7 +224,7 @@ public class LinkedInTest {
 
     private static void fetchCompanyProducts(OAuthService service)
             throws BandhuException {
-        LinkedInSPServices companyProducts = LinkedInSPServices.COMPANY_PRODUCTS;
+        LinkedInSPService companyProducts = LinkedInSPService.COMPANY_PRODUCTS;
         OAuthRequest updateRequest = service.createRequest(companyProducts,
                 null, "4301");
         ClientResponse resp = service.process(updateRequest);
@@ -125,7 +233,7 @@ public class LinkedInTest {
 
     private static void suggestCompanies(OAuthService service)
             throws BandhuException {
-        LinkedInSPServices companySuggestions = LinkedInSPServices.COMPANY_SUGGESTION;
+        LinkedInSPService companySuggestions = LinkedInSPService.COMPANY_SUGGESTION;
         OAuthRequest updateRequest = service.createRequest(companySuggestions);
         ClientResponse resp = service.process(updateRequest);
         System.out.println(resp.getEntity(String.class));
@@ -133,7 +241,7 @@ public class LinkedInTest {
 
     private static void searchCompany(OAuthService service)
             throws BandhuException {
-        LinkedInSPServices profileSelect = LinkedInSPServices.COMPANY_SEARCH;
+        LinkedInSPService profileSelect = LinkedInSPService.COMPANY_SEARCH;
         OAuthRequest updateRequest = service.createRequest(profileSelect, null,
                 "symphony");
         ClientResponse resp = service.process(updateRequest);
@@ -153,7 +261,7 @@ public class LinkedInTest {
 
     private static void fetchUpdates(OAuthService service)
             throws BandhuException {
-        LinkedInSPServices profileSelect = LinkedInSPServices.UPDATES;
+        LinkedInSPService profileSelect = LinkedInSPService.UPDATES;
         OAuthRequest updateRequest = service.createRequest(profileSelect);
         ClientResponse resp = service.process(updateRequest);
         // System.out.println(resp.getEntity(String.class));
@@ -169,7 +277,7 @@ public class LinkedInTest {
 
     private static void fetchConnections(OAuthService service)
             throws BandhuException {
-        LinkedInSPServices profileSelect = LinkedInSPServices.CONNECTIONS;
+        LinkedInSPService profileSelect = LinkedInSPService.CONNECTIONS;
         OAuthRequest updateRequest = service.createRequest(profileSelect);
         ClientResponse resp = service.process(updateRequest);
         ConnectionsType type = resp.getEntity(ConnectionsType.class);
@@ -180,6 +288,8 @@ public class LinkedInTest {
                     + ", "
                     + person.getLastName()
                     + "["
+                    + person.getApiStandardProfileRequest().getUrl()
+                    + ", "
                     + person.getId()
                     + ", "
                     + person.getApiStandardProfileRequest().getHeaders()
@@ -192,7 +302,7 @@ public class LinkedInTest {
 
     private static void fetchConnectionsSelect(OAuthService service)
             throws BandhuException {
-        LinkedInSPServices profileSelect = LinkedInSPServices.CONNECTIONS_SELECT;
+        LinkedInSPService profileSelect = LinkedInSPService.CONNECTIONS_SELECT;
         OAuthRequest updateRequest = service.createRequest(profileSelect, null,
                 "qkh4OapS1r");
         updateRequest.addHeaderValue("x-li-auth-token", "name:97HC");
@@ -207,19 +317,22 @@ public class LinkedInTest {
 
     private static void doSearch(OAuthService service, String param)
             throws BandhuException {
-        LinkedInSPServices profileSelect = LinkedInSPServices.SEARCH;
+        LinkedInSPService profileSelect = LinkedInSPService.SEARCH;
         PersonFilter searchPerson = new PersonFilter();
-        searchPerson.setKeywords("Gopinath");
-        searchPerson.setCompanyName("Symphony Services");
-        searchPerson.setCurrentCompany(true);
+        searchPerson.setFirstName("pooja");
         OAuthRequest updateRequest = service.createRequest(profileSelect,
                 param, searchPerson.toString());
         ClientResponse resp = service.process(updateRequest);
-        // System.out.println(resp.getEntity(String.class));
+        System.out.println(resp.getEntity(String.class));
+        // printSearch(service, resp);
+    }
+
+    private static void printSearch(OAuthService service, ClientResponse resp)
+            throws BandhuException {
         PeopleSearchType type = resp.getEntity(PeopleSearchType.class);
         System.out.println(type);
         int start = type.getPeople().getStart() != null ? type.getPeople()
-                .getStart() : 1;
+                .getStart() : 0;
         int count = type.getPeople().getCount() != null ? type.getPeople()
                 .getCount() : type.getPeople().getPerson().size();
         int total = type.getPeople().getTotal() != null ? type.getPeople()
@@ -234,6 +347,8 @@ public class LinkedInTest {
                     + ", ("
                     + person.getDistance()
                     + "["
+                    + person.getApiStandardProfileRequest().getUrl()
+                    + ", "
                     + person.getId()
                     + ", "
                     + person.getApiStandardProfileRequest().getHeaders()
@@ -250,23 +365,23 @@ public class LinkedInTest {
     }
 
     private static void getProfile(OAuthService service) throws BandhuException {
-        LinkedInSPServices profile = LinkedInSPServices.PROFILE;
+        LinkedInSPService profile = LinkedInSPService.PROFILE;
         OAuthRequest profileRequest = service.createRequest(profile);
         ClientResponse resp = service.process(profileRequest);
 
-        // System.out.println(resp.getEntity(String.class));
+        System.out.println(resp.getEntity(String.class));
 
-        PersonType person = resp.getEntity(PersonType.class);
+        // PersonType person = resp.getEntity(PersonType.class);
 
         // getProfilePublic(service, person);
-        getProfileSelect(service, person);
+        // getProfileSelect(service, person);
     }
 
     private static void getProfilePublic(OAuthService service, PersonType person)
             throws BandhuException {
         String url = person.getSiteStandardProfileRequest().getUrl();
         System.out.println(url);
-        LinkedInSPServices profileSelect = LinkedInSPServices.PROFILE_PUBLIC;
+        LinkedInSPService profileSelect = LinkedInSPService.PROFILE_PUBLIC;
         OAuthRequest updateRequest = service.createRequest(profileSelect, null,
                 URLEncoder.encode(url));
         ClientResponse selResponse = service.process(updateRequest);
@@ -289,10 +404,42 @@ public class LinkedInTest {
     private static void getProfileSelect(OAuthService service, String id,
             String headerName, String headerValue) throws BandhuException {
         System.out.println(id);
-        LinkedInSPServices profileSelect = LinkedInSPServices.PROFILE_SELECT;
+        LinkedInSPService profileSelect = LinkedInSPService.PROFILE_SELECT;
         OAuthRequest updateRequest = service.createRequest(profileSelect, null,
                 id);
         updateRequest.addHeaderValue(headerName, headerValue);
+        ClientResponse selResponse = service.process(updateRequest);
+        System.out.println(selResponse.getEntity(String.class));
+    }
+
+    private static void getProfileSelectConnected(OAuthService service,
+            String id, String headerName, String headerValue)
+            throws BandhuException {
+        System.out.println(id);
+        LinkedInSPService profileSelect = LinkedInSPService.PROFILE_SELECT_CONNECTED;
+        OAuthRequest updateRequest = service.createRequest(profileSelect, null,
+                id);
+        updateRequest.addHeaderValue(headerName, headerValue);
+        ClientResponse selResponse = service.process(updateRequest);
+        System.out.println(selResponse.getEntity(String.class));
+    }
+
+    private static void getProfileSelect(OAuthService service, String id)
+            throws BandhuException {
+        System.out.println(id);
+        LinkedInSPService profileSelect = LinkedInSPService.PROFILE_SELECT;
+        OAuthRequest updateRequest = service.createRequest(profileSelect, null,
+                id);
+        ClientResponse selResponse = service.process(updateRequest);
+        System.out.println(selResponse.getEntity(String.class));
+    }
+
+    private static void getProfileSelectPublic(OAuthService service, String url)
+            throws BandhuException {
+        System.out.println(url);
+        LinkedInSPService profileSelect = LinkedInSPService.PROFILE_PUBLIC;
+        OAuthRequest updateRequest = service.createRequest(profileSelect, null,
+                URLEncoder.encode(url));
         ClientResponse selResponse = service.process(updateRequest);
         System.out.println(selResponse.getEntity(String.class));
     }

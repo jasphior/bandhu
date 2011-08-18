@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bandhu</groupId>
 	<artifactId>bandhu-parent</artifactId>
-	<version>${bandhu.version}</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>bandhu parent project</name>
 	<modules>
@@ -12,6 +12,6 @@
 		<module>bandhu-ext-connector</module>
 	</modules>
 	<properties>
-		<bandhu.version>0.0.2-SNAPSHOT</bandhu.version>
+		<bandhu.version>0.0.3-SNAPSHOT</bandhu.version>
 	</properties>
 </project>

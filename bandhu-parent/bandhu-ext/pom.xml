@@ -3,18 +3,18 @@
 	<parent>
 		<artifactId>bandhu-parent</artifactId>
 		<groupId>org.bandhu</groupId>
-		<version>${bandhu.version}</version>
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bandhu.ext</groupId>
 	<artifactId>bandhu-ext</artifactId>
-	<version>${bandhu.version}</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>org.bandhu</groupId>
 			<artifactId>bandhu-core</artifactId>
-			<version>${bandhu.version}</version>
+			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
 	</dependencies>	
 
@@ -22,5 +22,6 @@
 		<module>bandhu-linkedin</module>
 		<module>bandhu-twitter</module>
 		<module>bandhu-fb</module>
+		<module>bandhu-wp</module>
 	</modules>
 </project>

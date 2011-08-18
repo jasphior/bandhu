@@ -1,6 +1,6 @@
 package org.bandhu.ext.linkedin.util;
 
-public class PersonFilter extends LinkedInFilter {
+public class PersonFilter extends Filter {
 
     /** first-name=[first name] */
     private String firstName;
