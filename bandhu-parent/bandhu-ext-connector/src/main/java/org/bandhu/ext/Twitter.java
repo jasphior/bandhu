@@ -1,9 +1,25 @@
 package org.bandhu.ext;
 
-public class Twitter {
-    private void tweet() {
-        // TODO Auto-generated method stub
+import org.bandhu.core.rest.oauth.OAuthService;
+import org.bandhu.ext.twitter.TwitterService;
+import org.bandhu.util.BandhuException;
 
+import twitter4j.Status;
+import twitter4j.StatusUpdate;
+
+public class Twitter {
+
+    private OAuthService oAuthService;
+    private TwitterService twitterService;
+
+    public Twitter(OAuthService oAuthService) throws BandhuException {
+        this.oAuthService = oAuthService;
+        twitterService = new TwitterService(oAuthService.getAccessToken());
+    }
+
+    public void tweet(String status) throws BandhuException {
+        StatusUpdate statusUpdate = new StatusUpdate(status);
+        Status updateStatus = twitterService.updateStatus(statusUpdate);
     }
 
     private void retweet() {

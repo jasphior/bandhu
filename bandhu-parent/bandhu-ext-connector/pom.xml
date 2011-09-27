@@ -11,11 +11,6 @@
 	<version>0.0.3-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
-			<groupId>org.bandhu</groupId>
-			<artifactId>bandhu-core</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 			<groupId>org.bandhu.ext</groupId>
 			<artifactId>bandhu-linkedin</artifactId>
 			<version>0.0.3-SNAPSHOT</version>
@@ -28,6 +23,21 @@
 		<dependency>
 			<groupId>org.bandhu.ext</groupId>
 			<artifactId>bandhu-fb</artifactId>
+			<version>0.0.3-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bandhu.ext</groupId>
+			<artifactId>bandhu-wp</artifactId>
+			<version>0.0.3-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bandhu.ext</groupId>
+			<artifactId>bandhu-gdata-blogger</artifactId>
+			<version>0.0.3-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bandhu.ext</groupId>
+			<artifactId>bandhu-gdata-picasa</artifactId>
 			<version>0.0.3-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

@@ -6,10 +6,10 @@ public enum DemoSPS implements RPCServiceProviderService {
     POST_NEW("metaWeblog.newPost", null, false);
 
     private String methodName;
-    private Class entity;
+    private Class<?> entity;
     private boolean authenticationRequired;
 
-    private DemoSPS(String methodName, Class entity,
+    private DemoSPS(String methodName, Class<?> entity,
             boolean authenticationRequired) {
         this.methodName = methodName;
         this.entity = entity;
@@ -22,7 +22,7 @@ public enum DemoSPS implements RPCServiceProviderService {
     }
 
     @Override
-    public Class getEntity() {
+    public Class<?> getEntity() {
         return entity;
     }
 

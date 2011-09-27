@@ -3,16 +3,23 @@ package org.bandhu.ext.linkedin.service;
 import java.util.Arrays;
 import java.util.List;
 
+import org.bandhu.core.rest.oauth.OAuthConsumer;
+import org.bandhu.core.rest.oauth.OAuthService;
 import org.bandhu.core.rest.sp.RESTServiceProvider;
 import org.bandhu.core.rest.sp.RESTServiceProviderService;
 import org.bandhu.core.rest.sp.SimpleSPService;
+import org.bandhu.util.BandhuException;
 import org.bandhu.util.BandhuUtil.Method;
 import org.bandhu.util.BandhuUtil.Protocol;
 
-public class LinkedInSP implements RESTServiceProvider {
+public class LinkedInSP extends OAuthService implements RESTServiceProvider {
     private static final String requestToken = "https://api.linkedin.com/uas/oauth/requestToken";
     private static final String authorize = "https://api.linkedin.com/uas/oauth/authorize";
     private static final String accessToken = "https://api.linkedin.com/uas/oauth/accessToken";
+
+    public LinkedInSP(OAuthConsumer oAuthConsumer) throws BandhuException {
+        super(oAuthConsumer);
+    }
 
     public String getServiceName() {
         return "LinkedIn";
@@ -45,9 +52,14 @@ public class LinkedInSP implements RESTServiceProvider {
     }
 
     @Override
+    public RESTServiceProviderService getProfileEndpoint() {
+        return LinkedInSPService.PROFILE;
+    }
+
+    @Override
     public List<LinkedInSPService> getServices() {
-        List<LinkedInSPService> list = Arrays.asList(LinkedInSPService
-                .values());
+        List<LinkedInSPService> list = Arrays
+                .asList(LinkedInSPService.values());
         return list;
     }
 

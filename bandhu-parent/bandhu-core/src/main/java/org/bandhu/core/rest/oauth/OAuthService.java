@@ -30,8 +30,14 @@ public class OAuthService extends BandhuRESTService {
     public OAuthService(OAuthConsumer oAuthConsumer,
             Class<? extends RESTServiceProvider> serviceProviderClazz)
             throws BandhuException {
-        super(oAuthConsumer.getKey(), oAuthConsumer);
+        super(String.valueOf(System.currentTimeMillis()), oAuthConsumer);
         this.serviceProvider = BandhuUtil.createInstance(serviceProviderClazz);
+        init();
+    }
+
+    protected OAuthService(OAuthConsumer oAuthConsumer) throws BandhuException {
+        super(oAuthConsumer);
+        serviceProvider = (RESTServiceProvider) this;
         init();
     }
 

@@ -30,7 +30,7 @@ public class BandhuUtil {
         if (object == null)
             return false;
         if (object instanceof Collection)
-            return ((Collection) object).size() > 0;
+            return ((Collection<?>) object).size() > 0;
         return object != null;
     }
 

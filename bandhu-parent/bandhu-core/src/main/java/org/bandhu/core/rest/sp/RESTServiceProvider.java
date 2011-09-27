@@ -13,4 +13,5 @@ public interface RESTServiceProvider extends BandhuServiceProvider {
 
     public <S extends RESTServiceProviderService> List<S> getServices();
 
+    public RESTServiceProviderService getProfileEndpoint();
 }

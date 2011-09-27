@@ -9,6 +9,8 @@ public interface RPCServiceProvider extends BandhuServiceProvider {
 
     public <S extends RPCServiceProviderService> List<S> getServices();
 
+    public RPCServiceProviderService getProfileEndpoint();
+
     public static final String BLOG_ID = "blog_id";
     public static final String USERNAME = "username";
     public static final String PASSWORD = "password";

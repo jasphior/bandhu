@@ -11,8 +11,13 @@ import com.sun.jersey.api.client.WebResource;
 
 public class BandhuRESTService extends ServiceAccessor {
 
-    public BandhuRESTService(String id, Consumer consumer) {
+    public BandhuRESTService(String id, Consumer consumer)
+            throws BandhuException {
         super(id, consumer);
+    }
+
+    public BandhuRESTService(Consumer consumer) throws BandhuException {
+        super(consumer);
     }
 
     public <T> Object execute(WebResource resource, BandhuRequest request,

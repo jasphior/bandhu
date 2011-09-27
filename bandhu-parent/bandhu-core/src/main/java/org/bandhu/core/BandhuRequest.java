@@ -19,7 +19,7 @@ public class BandhuRequest {
     protected Method method;
     protected String endpoint;
     protected String appendToUrl;
-    protected Class entity;
+    protected Class<?> entity;
     protected Object payload;
     protected Map<String, String> urlTokenData = new HashMap<String, String>();
     protected Map<String, String> queryParams = new HashMap<String, String>();
@@ -125,11 +125,11 @@ public class BandhuRequest {
         return queryParams;
     }
 
-    public void setEntity(Class entity) {
+    public void setEntity(Class<?> entity) {
         this.entity = entity;
     }
 
-    public Class getEntity() {
+    public Class<?> getEntity() {
         return entity;
     }
 

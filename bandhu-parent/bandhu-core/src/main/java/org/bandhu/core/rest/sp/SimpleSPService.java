@@ -7,7 +7,7 @@ public class SimpleSPService implements RESTServiceProviderService {
     private Protocol protocol;
     private Method method;
     private String url;
-    private Class entity;
+    private Class<?> entity;
     private int urlParams;
     private boolean authenticationRequired;
 
@@ -21,7 +21,7 @@ public class SimpleSPService implements RESTServiceProviderService {
     }
 
     public SimpleSPService(final Protocol protocol, final Method method,
-            final String url, final Class entity,
+            final String url, final Class<?> entity,
             boolean authenticationRequired, final int urlParams) {
         this.protocol = protocol;
         this.method = method;
@@ -47,7 +47,7 @@ public class SimpleSPService implements RESTServiceProviderService {
     }
 
     @Override
-    public <T> Class<T> getEntity() {
+    public Class<?> getEntity() {
         return entity;
     }
 

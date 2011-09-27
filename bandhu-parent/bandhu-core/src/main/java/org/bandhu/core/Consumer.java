@@ -1,6 +1,8 @@
 package org.bandhu.core;
 
-public class Consumer {
+import java.io.Serializable;
+
+public class Consumer implements Serializable {
     protected String userId;
     protected String secret;
 

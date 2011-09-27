@@ -13,10 +13,10 @@ public class WordPressAccessor extends RPCService {
     private int blogId;
     private XmlRpcClient client;
 
-    public WordPressAccessor(String blogURL, int blogId, Consumer consumer)
+    public WordPressAccessor(String blogName, int blogId, Consumer consumer)
             throws BandhuException {
         super(consumer);
-        this.blogURL = blogURL;
+        this.blogURL = "https://" + blogName + ".wordpress.com/xmlrpc.php";
         this.blogId = blogId;
         try {
             XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();

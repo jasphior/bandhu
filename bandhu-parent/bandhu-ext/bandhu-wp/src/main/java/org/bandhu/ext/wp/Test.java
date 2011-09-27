@@ -7,14 +7,16 @@ import java.util.Map;
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
+import org.bandhu.core.Consumer;
+import org.bandhu.util.BandhuException;
 
 public class Test {
-    static {
-        System.setProperty("http.proxyHost", "proxy.symphonysv.com");
-        System.setProperty("http.proxyPort", "8080");
-        System.setProperty("https.proxyHost", "proxy.symphonysv.com");
-        System.setProperty("https.proxyPort", "8080");
-    }
+    // static {
+    // System.setProperty("http.proxyHost", "proxy.symphonysv.com");
+    // System.setProperty("http.proxyPort", "8080");
+    // System.setProperty("https.proxyHost", "proxy.symphonysv.com");
+    // System.setProperty("https.proxyPort", "8080");
+    // }
 
     public static void main(String[] args) throws Exception {
         // blog();
@@ -23,11 +25,20 @@ public class Test {
         // addCategory(1, map);
         // getCategory(1);
         // getRecentPosts();
-        getTags();
+        // getTags();
+        execute();
     }
 
     static String xmlRpcUrl = "https://nikasaya.wordpress.com/xmlrpc.php";
-    static Object[] idpwd = new Object[] { "jasphior", "sensepress" };
+    static String[] idpwd = new String[] { "jasphior", "sensepress" };
+
+    private static void execute() throws BandhuException {
+        WordPressService service = new WordPressService();
+        Consumer consumer = new Consumer(idpwd[0], idpwd[1]);
+        WordPressAccessor accessor = new WordPressAccessor("nikasaya", 1,
+                consumer);
+        service.getUserBlogs(accessor);
+    }
 
     private static void getTags() throws Exception {
         XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();

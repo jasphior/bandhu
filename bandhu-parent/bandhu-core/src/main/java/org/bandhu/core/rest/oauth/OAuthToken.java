@@ -1,5 +1,6 @@
 package org.bandhu.core.rest.oauth;
 
+import java.io.Serializable;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +10,7 @@ import org.bandhu.util.BandhuUtil;
 
 import com.sun.jersey.oauth.signature.OAuthParameters;
 
-public class OAuthToken {
+public class OAuthToken implements Serializable {
     private Map<String, String> params = new HashMap<String, String>();
 
     private int type;

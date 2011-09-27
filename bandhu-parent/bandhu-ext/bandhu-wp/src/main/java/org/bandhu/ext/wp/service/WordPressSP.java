@@ -28,6 +28,11 @@ public class WordPressSP implements RPCServiceProvider {
     }
 
     @Override
+    public RPCServiceProviderService getProfileEndpoint() {
+        return WordPressSPService.GET_USERS_BLOGS;
+    }
+
+    @Override
     public <S extends RPCServiceProviderService> List<S> getServices() {
         // TODO Auto-generated method stub
         return null;
