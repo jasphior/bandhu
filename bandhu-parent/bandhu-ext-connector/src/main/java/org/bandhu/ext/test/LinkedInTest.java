@@ -1,7 +1,6 @@
 package org.bandhu.ext.test;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.net.URLEncoder;
 import java.util.Properties;
 import java.util.Scanner;
@@ -10,7 +9,6 @@ import org.bandhu.core.rest.oauth.OAuthConsumer;
 import org.bandhu.core.rest.oauth.OAuthRequest;
 import org.bandhu.core.rest.oauth.OAuthService;
 import org.bandhu.core.rest.oauth.OAuthToken;
-import org.bandhu.ext.ServiceID;
 import org.bandhu.ext.linkedin.LinkedInService;
 import org.bandhu.ext.linkedin.jaxb.AuthorizationType;
 import org.bandhu.ext.linkedin.jaxb.ConnectionsType;
@@ -24,33 +22,27 @@ import org.bandhu.ext.linkedin.jaxb.PeopleSearchType;
 import org.bandhu.ext.linkedin.jaxb.PersonType;
 import org.bandhu.ext.linkedin.jaxb.RecipientType;
 import org.bandhu.ext.linkedin.jaxb.RecipientsType;
-import org.bandhu.ext.linkedin.jaxb.UpdateType;
-import org.bandhu.ext.linkedin.jaxb.UpdatesType;
 import org.bandhu.ext.linkedin.service.LinkedInSP;
 import org.bandhu.ext.linkedin.service.LinkedInSPService;
 import org.bandhu.ext.linkedin.util.JobFilter;
 import org.bandhu.ext.linkedin.util.LinkedInXMLBuilder;
 import org.bandhu.ext.linkedin.util.PersonFilter;
-import org.bandhu.util.BandhuConfig;
 import org.bandhu.util.BandhuException;
 
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.oauth.signature.OAuthParameters;
 
-public class LinkedInTest {
-    static {
-        // System.setProperty("http.proxyHost", "proxy.symphonysv.com");
-        // System.setProperty("http.proxyPort", "8080");
-        // System.setProperty("https.proxyHost", "proxy.symphonysv.com");
-        // System.setProperty("https.proxyPort", "8080");
-    }
+public class LinkedInTest extends BaseTest {
 
-    static Properties properties;
-    static String configName = "jlinkedin.properties";
     static {
-        BandhuConfig.setServiceResolver(ServiceID.NULL);
         properties = new Properties();
         try {
+            System.out.println("use test account or live (1 or 2)?");
+            if (new Scanner(System.in).nextLine().equals("1")) {
+                configName = "jlinkedin.properties";
+            } else {
+                configName = "linkedin.properties";
+            }
             properties.load(new FileInputStream(configName));
             System.out.println("loaded..");
             System.out.println(properties);
@@ -59,9 +51,6 @@ public class LinkedInTest {
         }
 
     }
-
-    static OAuthToken token;
-    static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws BandhuException {
         OAuthService service = null;
@@ -88,6 +77,7 @@ public class LinkedInTest {
         PersonType profile = inService.getProfile();
         System.out.println(profile.getFirstName());
         System.out.println(profile.getLastName());
+        fetchUpdates(service);
     }
 
     public static void mainx(String[] args) throws BandhuException {
@@ -279,31 +269,20 @@ public class LinkedInTest {
         System.out.println(resp.getEntity(String.class));
     }
 
-    private static void verifyGetAccessToken(OAuthService service)
-            throws BandhuException {
-        String authenticationURL = service.getAuthenticationURL();
-        System.out.println(authenticationURL);
-
-        service.setVerifier(scanner.nextLine());
-        token = service.fetchAccessToken();
-        System.out.println(token);
-        updateSession(token);
-    }
-
     private static void fetchUpdates(OAuthService service)
             throws BandhuException {
         LinkedInSPService profileSelect = LinkedInSPService.UPDATES;
         OAuthRequest updateRequest = service.createRequest(profileSelect);
         ClientResponse resp = service.process(updateRequest);
-        // System.out.println(resp.getEntity(String.class));
-        UpdatesType type = resp.getEntity(UpdatesType.class);
-        System.out.println("Showing from " + type.getStart() + " to "
-                + type.getCount() + " of " + type.getTotal());
-        for (UpdateType update : type.getUpdate()) {
-            PersonType person = update.getUpdateContent().getPerson();
-            System.out.println(person.getFirstName() + ", "
-                    + person.getLastName() + ", " + update.getUpdateType());
-        }
+        System.out.println(resp.getEntity(String.class));
+        // UpdatesType type = resp.getEntity(UpdatesType.class);
+        // System.out.println("Showing from " + type.getStart() + " to "
+        // + type.getCount() + " of " + type.getTotal());
+        // for (UpdateType update : type.getUpdate()) {
+        // PersonType person = update.getUpdateContent().getPerson();
+        // System.out.println(person.getFirstName() + ", "
+        // + person.getLastName() + ", " + update.getUpdateType());
+        // }
     }
 
     private static void fetchConnections(OAuthService service)
@@ -475,14 +454,4 @@ public class LinkedInTest {
         System.out.println(selResponse.getEntity(String.class));
     }
 
-    private static void updateSession(OAuthToken token) {
-        properties.setProperty(OAuthParameters.TOKEN, token.getToken());
-        properties.setProperty(OAuthParameters.TOKEN_SECRET,
-                token.getTokenSecret());
-        try {
-            properties.store(new FileOutputStream(configName), null);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }

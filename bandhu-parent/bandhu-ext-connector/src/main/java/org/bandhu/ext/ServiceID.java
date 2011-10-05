@@ -6,7 +6,7 @@ import org.bandhu.ext.twitter.TwitterService;
 import org.bandhu.ext.twitter.service.TwitterSP;
 
 public enum ServiceID implements org.bandhu.util.ServiceID {
-    NULL(0, "REF", null, null),
+    CONFIG(0, "REF", null, null),
 
     LinkedIn(1, "LinkedIn", LinkedInSP.class, LinkedInService.class),
 

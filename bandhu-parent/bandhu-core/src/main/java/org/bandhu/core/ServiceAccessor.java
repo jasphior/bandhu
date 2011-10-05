@@ -15,6 +15,8 @@ public abstract class ServiceAccessor implements Serializable {
     private int serviceID;
 
     public ServiceAccessor(String id, Consumer consumer) throws BandhuException {
+        chkConfig();
+
         if (id == null) {
             this.id = consumer.getUserId();
         } else {
@@ -22,6 +24,14 @@ public abstract class ServiceAccessor implements Serializable {
         }
         this.consumer = consumer;
         this.serviceID = BandhuConfig.resolveToId(this.getClass());
+    }
+
+    private void chkConfig() throws BandhuException {
+        if (!BandhuConfig.isConfigured()) {
+            System.out.println("Bandhu's mandatory configs are missing!!");
+            throw new BandhuException(
+                    "Bandhu's mandatory configs are missing!!");
+        }
     }
 
     public ServiceAccessor(Consumer consumer) throws BandhuException {

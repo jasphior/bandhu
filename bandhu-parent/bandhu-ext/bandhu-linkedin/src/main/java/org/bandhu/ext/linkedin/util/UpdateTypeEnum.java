@@ -59,7 +59,10 @@ public enum UpdateTypeEnum {
             "This update type is deprecated in favor of SHAR."),
 
     VIRL("VIRL", "Viral update",
-            "A connection has commented on or liked another update.");
+            "A connection has commented on or liked another update."),
+
+    MSFC("MSFC", "Company Follow Updates",
+            "A change to one of the companies the member is following."), ;
 
     private String code;
     private String name;

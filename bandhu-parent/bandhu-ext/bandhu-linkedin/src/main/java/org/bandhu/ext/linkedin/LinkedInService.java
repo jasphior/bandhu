@@ -1,5 +1,8 @@
 package org.bandhu.ext.linkedin;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.bandhu.core.rest.oauth.OAuthRequest;
 import org.bandhu.core.rest.oauth.OAuthService;
 import org.bandhu.ext.linkedin.jaxb.CompaniesType;
@@ -14,7 +17,10 @@ import org.bandhu.ext.linkedin.jaxb.MailboxItemType;
 import org.bandhu.ext.linkedin.jaxb.PeopleSearchType;
 import org.bandhu.ext.linkedin.jaxb.PersonType;
 import org.bandhu.ext.linkedin.jaxb.ProductsType;
+import org.bandhu.ext.linkedin.jaxb.RecipientType;
+import org.bandhu.ext.linkedin.jaxb.RecipientsType;
 import org.bandhu.ext.linkedin.jaxb.ShareType;
+import org.bandhu.ext.linkedin.jaxb.UpdateCommentType;
 import org.bandhu.ext.linkedin.jaxb.UpdatesType;
 import org.bandhu.ext.linkedin.service.LinkedInSPService;
 import org.bandhu.ext.linkedin.util.JobFilter;
@@ -28,7 +34,7 @@ import com.sun.jersey.api.client.ClientResponse;
 
 public class LinkedInService {
 
-    public static final int STATUS_SUCCESS = 200;
+    public static final List<Integer> STATUS_SUCCESS = Arrays.asList(200, 201);
 
     private OAuthService service;
 
@@ -56,10 +62,58 @@ public class LinkedInService {
         return true;
     }
 
+    public boolean sendMessage(String subject, String message, String to)
+            throws BandhuException {
+        MailboxItemType mailbox = new MailboxItemType();
+        RecipientsType recipients = new RecipientsType();
+        RecipientType recipient = new RecipientType();
+        PersonType person = new PersonType();
+        recipient.setPerson(person);
+        person.setPath(to);
+        recipients.setRecipient(recipient);
+        mailbox.setRecipients(recipients);
+        mailbox.setSubject(subject);
+        mailbox.setBody(message);
+        return sendMessage(mailbox);
+    }
+
+    public boolean postLike(boolean islike, String updateKey)
+            throws BandhuException {
+        LinkedInSPService postLike = LinkedInSPService.POSTING_LIKES;
+        OAuthRequest postRequest = service.createRequest(postLike, null,
+                updateKey);
+        postRequest.setPayload(LinkedInXMLBuilder.toXMLIsLike(islike));
+        ClientResponse resp = service.process(postRequest);
+        handle(resp);
+        return true;
+    }
+
     public boolean postShare(ShareType shareType) throws BandhuException {
         LinkedInSPService jobSuggestion = LinkedInSPService.POSTING_SHARES;
         OAuthRequest postRequest = service.createRequest(jobSuggestion);
         postRequest.setPayload(LinkedInXMLBuilder.toXML(shareType));
+        ClientResponse resp = service.process(postRequest);
+        handle(resp);
+        return true;
+    }
+
+    public boolean postReshare(ShareType shareType) throws BandhuException {
+        LinkedInSPService jobSuggestion = LinkedInSPService.POSTING_SHARES;
+        OAuthRequest postRequest = service.createRequest(jobSuggestion);
+        postRequest.setPayload(LinkedInXMLBuilder.toXML(shareType));
+        ClientResponse resp = service.process(postRequest);
+        handle(resp);
+        return true;
+    }
+
+    public boolean postComment(String comment, String updateKey)
+            throws BandhuException {
+        LinkedInSPService postComment = LinkedInSPService.POSTING_COMMENT;
+        OAuthRequest postRequest = service.createRequest(postComment, null,
+                updateKey);
+        UpdateCommentType updateComment = new UpdateCommentType();
+        updateComment.setComment(comment);
+        postRequest.setPayload(LinkedInXMLBuilder.toXML(updateComment));
         ClientResponse resp = service.process(postRequest);
         handle(resp);
         return true;
@@ -154,6 +208,30 @@ public class LinkedInService {
         ClientResponse resp = service.process(request);
         handle(resp);
         return resp.getEntity(CompaniesType.class);
+    }
+
+    public UpdatesType fetchUpdates(int start, int count)
+            throws BandhuException {
+        return fetchUpdates(null, start, count);
+    }
+
+    public UpdatesType fetchUpdates(UpdateFilter updateFilter, int start,
+            int count) throws BandhuException {
+        LinkedInSPService updates = LinkedInSPService.UPDATES;
+        OAuthRequest req = null;
+        if (updateFilter == null)
+            req = service.createRequest(updates);
+        else
+            req = service.createRequest(updates, updateFilter.toString());
+        if (start > -1) {
+            req.addQueryParam("start", String.valueOf(start));
+        }
+        if (count > -1) {
+            req.addQueryParam("count", String.valueOf(count));
+        }
+        ClientResponse resp = service.process(req);
+        handle(resp);
+        return resp.getEntity(UpdatesType.class);
     }
 
     public UpdatesType fetchUpdates() throws BandhuException {
@@ -264,7 +342,7 @@ public class LinkedInService {
     public static final String PROCESS_FAILURE = "Unable to process the request!";
 
     public static void handle(ClientResponse response) throws LinkedInException {
-        if (response.getStatus() != STATUS_SUCCESS) {
+        if (!STATUS_SUCCESS.contains(response.getStatus())) {
             throw new LinkedInException(PROCESS_FAILURE);
         }
     }

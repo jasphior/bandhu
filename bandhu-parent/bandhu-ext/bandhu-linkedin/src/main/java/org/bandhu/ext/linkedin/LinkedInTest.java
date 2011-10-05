@@ -50,6 +50,7 @@ public class LinkedInTest {
             properties.load(new FileInputStream(configName));
             System.out.println("loaded..");
             System.out.println(properties);
+            // BandhuConfig.setServiceResolver(ServiceID)
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -81,6 +82,7 @@ public class LinkedInTest {
             verifyGetAccessToken(service);
         }
         fetchUpdates(service);
+        System.out.println("-------------------------------------");
         getProfile(service);
         getProfileSelect(service, "bXJUPUibw6", "x-li-auth-token",
                 "OUT_OF_NETWORK:wz1i");

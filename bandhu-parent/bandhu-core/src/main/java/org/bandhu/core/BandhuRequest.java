@@ -86,11 +86,13 @@ public class BandhuRequest {
 
         resource = client.resource(endpoint);
 
-        MultivaluedMap mmap = new MultivaluedMapImpl();
-        mmap.putAll(queryParams);
+        MultivaluedMap<String, String> mmap = new MultivaluedMapImpl();
+
         for (String key : queryParams.keySet()) {
-            resource = resource.queryParams(mmap);
+            mmap.putSingle(key, queryParams.get(key));
         }
+
+        resource = resource.queryParams(mmap);
 
         endpoint = resource.getURI().toString();
 

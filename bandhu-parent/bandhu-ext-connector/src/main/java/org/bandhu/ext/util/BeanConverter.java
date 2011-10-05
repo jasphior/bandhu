@@ -19,8 +19,8 @@ public class BeanConverter {
         to.setId(String.valueOf(from.getId()));
         to.setDisplayName(from.getName());
         to.setPictureUrl(from.getProfileImageURL().getPath());
-        to.addParam(ParamConstants.TWI_FOLLOWERS, from.getFollowersCount());
-        to.addParam(ParamConstants.TWI_FOLLOWING, from.getFriendsCount());
-        to.addParam(ParamConstants.TWI_FOLLOWING, from.getFavouritesCount());
+        to.addParam(ServiceParams.TWI_FOLLOWERS, from.getFollowersCount());
+        to.addParam(ServiceParams.TWI_FOLLOWING, from.getFriendsCount());
+        to.addParam(ServiceParams.TWI_FOLLOWING, from.getFavouritesCount());
     }
 }

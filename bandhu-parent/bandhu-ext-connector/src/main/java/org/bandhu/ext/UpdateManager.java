@@ -13,7 +13,7 @@ import org.bandhu.util.BandhuException;
 import twitter4j.User;
 
 public class UpdateManager {
-    public Profile getInitialProfile(ServiceAccessor accessor)
+    public static Profile getInitialProfile(ServiceAccessor accessor)
             throws BandhuException {
         Profile profile = new Profile();
 
